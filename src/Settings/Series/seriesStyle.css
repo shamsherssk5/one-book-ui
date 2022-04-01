@@ -1,0 +1,15 @@
+#series {
+    font-family: Arial;
+}
+.series-main-container{
+    margin-top: 2.2%;
+    margin-left: 16.68%;
+    width:50%;
+}
+
+.series-main-container  .series-entry-div .series-form-entry-bottom-div{
+    position: absolute;
+    top: 92.12%;
+    left: 90.93%;
+
+}

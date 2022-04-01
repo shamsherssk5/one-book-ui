@@ -1,0 +1,14 @@
+.materialreq-buttons {
+	width: 70% !important;
+	height: 100%;
+	display: flex;
+	cursor: pointer;
+}
+
+.g_plus.materialreq {
+	left: 30% !important;
+}
+
+.mrq {
+	left: 55% !important;
+}

@@ -1,0 +1,187 @@
+@import "../variable.css";
+@font-face {
+  font-family: "Bahnschrift";
+  src: local("Oxygen"), url(./font/BAHNSCHRIFT.TTF) format("truetype");
+}
+@mixin light-body {
+  font-family: "Bahnschrift", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 1.8;
+  padding: 0;
+  margin: 0;
+  color: var(--iq-secondary);
+  background: var(--iq-bg-light-color);
+}
+.auth-container {
+  font-family: "Bahnschrift", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 1.8;
+  padding: 0;
+  margin: 0;
+  overflow-y: auto!important;
+  height: 90vh!important;
+  color: var(--iq-secondary);
+  background: var(--iq-bg-light-color);
+  background: #fcfcfc 0% 0% no-repeat padding-box;
+}
+@import "../typography";
+@import "../style";
+@import "../responsive";
+
+.container {
+  border-radius: 27px;
+  box-shadow: 0px 0px 10px #7a7a7a29;
+}
+.form-control,
+.select2-container--default .select2-selection--single,
+.select2-dropdown {
+  background: var(--iq-grey) 0% 0% no-repeat padding-box;
+  border: 0.75px solid #efefef;
+  border-radius: 8px 0px 10px 0px;
+}
+.is-invalid {
+  .select2-container--default .select2-selection--single {
+    border-color: #dc3545;
+    padding-right: calc(1.5em + 0.75rem);
+    background-repeat: no-repeat;
+    background-position: right calc(0.375em + 0.1875rem) center;
+    background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+  }
+}
+
+.select2-container--default .select2-search--dropdown .select2-search__field {
+  border: 1px solid #d9d9d9 !important;
+}
+.btn-primary {
+  background: var(--iq-primary) 0% 0% no-repeat padding-box;
+}
+.btn {
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 9px;
+}
+.form-group {
+  margin-bottom: 12px !important;
+}
+.w-full {
+  width: 100%;
+}
+.blockline::before {
+  content: "\2014\2014\2014\00A0\00A0\00A0\00A0";
+}
+.blockline::after {
+  content: "\00A0\00A0\00A0\00A0\2014\2014\2014";
+}
+.form-control::placeholder {
+  font-size: 10px;
+}
+.organization-container,
+.database-container {
+  max-width: 750px;
+}
+@media only screen and (min-width: 1800px) and (max-width: 1920px) {
+  .blockline::before {
+    content: "\2014\2014\00A0\00A0";
+  }
+  .blockline::after {
+    content: "\00A0\00A0\2014\2014";
+  }
+  .organization-container,
+  .database-container {
+    max-width: 950px !important;
+  }
+}
+@media (max-width: 991px) {
+  .blockline::before {
+    content: "\2014\2014\00A0\00A0\00A0";
+  }
+  .blockline::after {
+    content: "\00A0\00A0\00A0\2014\2014";
+  }
+}
+@media (max-width: 480px) {
+  .blockline::before {
+    content: "\2014\00A0";
+  }
+  .blockline::after {
+    content: "\00A0\2014";
+  }
+}
+footer {
+  padding-top: 50px;
+}
+@media only screen and (min-width: 1800px) and (max-width: 1920px) {
+  footer {
+    padding-top: 60px;
+  }
+}
+.footer {
+  height: 50px;
+  padding: 15px 0;
+  position: fixed;
+  bottom: 0;
+  background-color: #fff;
+  z-index: 999;
+}
+.snackbars .snack {
+  background: var(--iq-primary) !important;
+}
+
+.custom-control-label::before {
+  width: 14px !important;
+  height: 14px !important;
+}
+.custom-control-label::after {
+  top: 3px !important;
+  left: -25px !important;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+.display-none {
+  display: none;
+}
+.optional-block {
+  .ng-select2 .select2,
+  .datepicker-default input {
+    background: #fcfcfc 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0px 10px #b5b5b529;
+    border: 0.75px solid #d1d8ec;
+    border-radius: 8px 0px 10px 0px;
+    padding: 0 10px;
+  }
+  ngx-datepicker {
+    padding: 0px;
+    &.form-control.is-invalid input,
+    &.was-validated .form-control:invalid input {
+      background: transparent !important;
+      border-radius: 0;
+      border: none;
+    }
+  }
+}
+
+.datepicker-container {
+  width: 100%;
+  input {
+    border: none;
+    width: 100%;
+    background: transparent;
+  }
+}
+// datebpicker position
+.datepicker-default .calendar-container {
+  bottom: 35px;
+  top: unset !important;
+}
+// prepend and append
+.input-group-text {
+  padding: 2px 8px;
+  background: var(--iq-grey) 0% 0% no-repeat padding-box;
+  border: 0.75px solid #efefef;
+  border-radius: 8px 0px 10px 0px;
+}

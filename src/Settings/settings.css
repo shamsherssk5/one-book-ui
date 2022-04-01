@@ -1,0 +1,71 @@
+.temp2Setting {
+    background: #ffffff;
+    border: 0.5px solid #c4c4c4;
+    box-sizing: border-box;
+    backdrop-filter: blur(4px);
+    border-radius: 5px;
+    position: relative;
+}
+
+.settings-content-box {
+    top: 17.62%;
+    height: 82.38%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+}
+
+.setting-content-left-box {
+    height: 100%;
+    width: 30%;
+    border-right: 0.5px solid #239bcf;
+}
+.menubox {
+    top: 8.9%;
+    width:100%;
+    font-family: Arial;
+    font-weight: 400;
+    font-size: 1.04vw;
+    height: 91.9%;
+    position: relative;
+}
+
+.menu-label-text{
+    margin-left: 16.1%;
+}
+.menulabal {
+    height: 5.5vh;
+    cursor: pointer;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    color: #353a42;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.menulabal:hover {
+    color: #2687d7;
+    background-color:rgba(0, 0, 0, 0.03);
+}
+.setting-content-right-box {
+    height: 100%;
+    width: 75%;
+    overflow: auto;
+}
+.setting-left {
+    left: 8.08%;
+    font-family: Arial;
+}
+
+.setting-header {
+    height: 17.62% !important;
+}
+
+.back-button-pic{
+    width: 1.56vw;
+    position: absolute;
+    top:calc(33% + 0.37vw);
+    left: calc(0.259vw + 6.8vh);
+}
+

@@ -1,0 +1,142 @@
+.hideIt{
+    display: none!important;
+}
+.Task{
+    height: auto;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 2px;
+    display: flex;
+}
+
+.Task:hover {
+    box-shadow: 0 0 10px rgba(33,33,33,.2); 
+  }
+
+.priorityColourContainer{
+    width: 4.92%;
+    position: relative;
+}
+.priorityBox{
+    top:16px;
+    width:30%;
+    height: calc(100% - 25px);
+    left:0;
+    position: absolute;
+}
+.taskDetContainer{
+    width:90.16%; 
+}
+.taskDetBox{
+    padding-top: 13px;
+    padding-bottom: 7px;
+}
+.emptyTaskBox{
+    width: 100%;
+    height: 8px;
+}
+.title{
+    font-style: normal;
+    text-align: left;
+    font-size: 0.7vw;
+    font-weight: bold;
+    color: #FFFFFF;
+    padding: 2px 6px 2px 6px;
+    top:0%;
+    left:0%;
+    position: absolute;
+}
+
+.dots{
+    top: 0;
+    right: 0;
+    position: absolute;
+    margin-top: -0.1px;
+    
+}
+.dots:hover{
+    width: 20%;
+}
+.subject{
+    text-align: left;
+    font-size: 0.7vw;
+    color: #595047;
+    font-weight: bold;
+    display: flex;
+}
+.subjectImage{
+    width: 7%;
+    height: 100%;
+}
+.subjectImage img{
+    width: 0.6vw;
+}
+.note{
+    padding-top: 10px;
+    text-align: left;
+    font-size: 0.7vw;
+    color: #353A42;
+    font-weight: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+   -webkit-box-orient: vertical;
+}
+
+.userAvatar{
+    width: 1vw;
+    border-radius: 50%;
+    margin-right: 0.3vw;
+    text-align: left;
+}
+
+.delete:hover{
+    color: #c91d12!important;
+}
+
+.messageCountLogo{
+    width: 0.8vw;
+    background-color: transparent;
+    margin-right: 2px;
+}
+
+.endDateLogo{
+    width: 0.65vw;
+    background-color: transparent;
+    margin-right: 5px;
+}
+.attachments{
+    width: 0.9vw;
+    background-color: transparent;
+    margin-right: 2px;
+}
+.textCount{
+    font-size: 0.65vw;
+    margin-right: 5px;
+}
+
+.popup{
+    background: #F9F9F9;
+    box-sizing: border-box;
+    border-radius: 2px;
+}
+
+.popup p{
+    margin: 0px !important;
+    cursor: pointer;
+    border-bottom: 0.5px solid #C4C4C4;
+    padding: 2px 35px 2px 5.9px;
+    font-size: 0.7vw;
+    font-weight: bold;
+    color: #353A42;
+    user-select: none;
+}
+
+.popup p:last-child{
+    border: none;
+}
+
+.popup p:hover{
+    color: #009DB2;
+}

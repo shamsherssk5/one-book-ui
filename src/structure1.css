@@ -1,0 +1,141 @@
+.main-left-right-div-container{
+    height: 96.1%;
+    width: 96%;
+    top:1.3%;
+    position: relative;
+    left:3.5%;
+    display: flex;
+}
+
+.main-left-div{
+    left:0%;
+    height: 100%;
+    width: 76.9%;
+    position: absolute;
+    background: #FFFFFF;
+    border: 0.5px solid #C4C4C4;
+    box-sizing: border-box;
+    backdrop-filter: blur(4px);
+    border-radius: 5px;
+}
+
+.main-right-div{
+    height: 100%;
+    left:77.3%;
+    width: 22.7%;
+    position: absolute;
+    background: #FFFFFF;
+    border: 0.5px solid #C4C4C4;
+    box-sizing: border-box;
+    backdrop-filter: blur(4px);
+    border-radius: 5px;
+}
+
+.right-div-header,.left-div-header{
+    height: 13.5%;
+    width:100%;
+    border-bottom: 0.5px solid #239BCF;
+    position: relative;
+}
+.right-div-content,.left-div-content{
+    height: 86.5%;
+    width:100%;
+}
+
+.header-title-main{
+    top:33%;
+    left:10.78%;
+    position: absolute;
+    font-size: 1.5vw;
+    color: #2687D7;
+    font-weight: 700;
+}
+
+.header-title-sub{
+    top:33%;
+    left:10.78%;
+    position: absolute;
+    font-size: 0.7vw;
+    color: #2687D7;
+    font-weight: bold;
+    transform: translate(0,-50%);
+}
+
+.g_plus{
+    position: absolute;
+    top:calc(33% + 0.37vw);
+    left:19%;
+    height: 1.5vw;
+    width: 1.5vw;
+    cursor: pointer;
+
+}
+
+.left-options-button{
+    position: absolute;
+    color: #FFFFFF;
+    background-color:#2687D7;
+    margin: 0;
+    outline: none;
+    border: none;
+    top:33%;
+    right:1%;
+    border-radius: 3px;
+    text-align: center;
+    font-size: 0.83vw;
+    transform: translate(0,-23%);
+    display: inline-flex;
+    align-items: center;
+    font-weight: bold;
+    padding: 0.45vh 0.5vw 0.45vh 0.5vw; 
+}
+
+.left-gs-img{
+    position: absolute;
+    right:1%;
+    height: 1.04vw;
+    width: 1.04vw;
+    bottom: 7%;
+    cursor: pointer;
+}
+
+.right-header-title{
+    position: absolute;
+    top:33%;
+    left:6.5%;
+    font-weight: bold;
+    color: #353A42;
+    font-size: 1.14vw;
+    transform: translate(0,-40%);
+}
+
+.right-sub-header-1{
+    left:6.5%;
+    bottom: 2%;
+    position: absolute;
+    cursor: pointer;
+    font-size: 0.9vw;
+    font-weight: bold;
+}
+
+.right-sub-header-2{
+    left:45%;
+    bottom: 2%;
+    position: absolute;
+    cursor: pointer;
+    font-size: 0.9vw;
+    font-weight: bold;
+}
+.right-sub-header-2.clicked,.right-sub-header-1.clicked{
+    color: #2687D7;
+}
+
+.right-sub-header-2.clicked::after,.right-sub-header-1.clicked::after{
+    content: "";
+    display: block;
+    position: absolute;
+    background: #ffc086;
+    height: 2px;
+    width: 110%;
+    margin-left: -5%;
+}

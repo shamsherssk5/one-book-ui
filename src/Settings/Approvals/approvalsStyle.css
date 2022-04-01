@@ -1,0 +1,351 @@
+#approvals {
+    font-family: Arial;
+    font-style: normal;
+    text-align: left;
+    vertical-align: middle;
+    overflow-x: hidden;
+}
+.approvals-header-div{
+    display: flex;
+    justify-content: space-between;
+}
+
+#approvals .approvals-header-div,
+.approvals-entry-div {
+    border-bottom: 0.02vw solid #2687d7;
+}
+.approvals-header-div .approvals-header-search-div{
+    font-size: 1.23vw;
+    font-weight: 700;
+    text-align: left;
+    vertical-align: middle;
+    margin-right: 0.83vw;
+    font-size: 1vw;
+    font-family: Arial;
+}
+.approvals-header-div .approvals-header-total-div{
+    margin-top: 1.55%;
+    font-size: 1.23vw;
+    color: #2687d7;
+    margin-left: 2.7%;
+    font-weight: 700;
+    text-align: left;
+    vertical-align: middle;
+}
+.top-Div {
+    border-bottom: 1px solid #2687d7;
+}
+.approvals-entry-div {
+    border-bottom: 1px solid #2687d7;
+    display: flex;
+}
+.approvals-entry-div .approvals-entry-right-div fieldset {
+    margin-top: 2.07%;
+    margin-left: 0.76%;
+    margin-right: 0.76%;
+    padding-left: 0.63vw;
+    border: 0.05vw solid #c4c4c4;
+    border-radius: 0.05vw;
+    text-align: left;
+    font-size: 0.72vw;
+    color: #c4c4c4;
+    font-weight: normal;
+    width: 15.72vw;
+    height: 2.8139656070870247vw;
+}
+.approvals-entry-div .approvals-entry-left-div {
+    /* border: 1px solid; */
+    width: 13.61%;
+}
+.approvals-entry-div .approvals-entry-right-div legend {
+    margin-left: 3vw;
+    padding-left: 0.26vw;
+    padding-right: 1.3vw;
+    float: none !important;
+    width: auto;
+    color: #353a42;
+    margin: 0 !important;
+    font-family: Arial;
+    font-weight: 400;
+    font-size: 0.72vw;
+}
+.approvals-entry-div input,
+textarea {
+    border: none;
+    outline: none;
+    width: 100%;
+    cursor: pointer;
+    color: #c4c4c4;
+    font-weight: 400;
+    /* padding-left: 0.26vw; */
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.approvals-entry-div .approvals-entry-right-div {
+    display: flex;
+    flex-direction: row;
+    transition: visibility 0s, opacity 0.5s linear;
+}
+.approvals-entry-div .approvals-entry-right-div input::placeholder {
+    font-size: 0.72vw;
+    color: #c4c4c4;
+    font-weight: 400;
+}
+.approvals-entry-div .approvals-entry-right-div select {
+    /* appearance: none; */
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.approvals-entry-div .approvals-entry-right-div .title {
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    color: #c4c4c4;
+    padding-left: 0.26vw;
+}
+.listTotal {
+    font-size: 1.17vw;
+    color: #2687d7;
+    margin-left: 2vw;
+    font-weight: 600;
+}
+.approvals-entry-div .approvals-entry-left-div .approvals-entry-new-Btn {
+    background-color: #2687d7;
+    color: white;
+    /* width: 11.53%; */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border-radius: 0.1vw;
+    border: none;
+    font-family: Arial;
+    font-style: normal;
+    font-size: 0.8337675872850442vw;
+    text-align: center;
+    vertical-align: middle;
+    margin: 1vw;
+    margin-top: 1.6vw;
+}
+#approvals .approvals-list-div table {
+    border-collapse: collapse;
+    width: 100%;
+}
+.approvals-list-div th {
+    color: #2687d7;
+    font-family: Arial;
+    font-style: normal;
+    font-size: 1.17vw;
+    text-align: Left;
+    vertical-align: middle;
+    font-weight: normal;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+.approvals-list-div tbody {
+    color: #353a42;
+    font-family: Arial;
+    font-style: normal;
+    font-size: 1.17vw;
+    text-align: Left;
+    vertical-align: middle;
+    font-weight: normal;
+}
+.approvals-list-div td {
+    font-family: Arial;
+    font-style: normal;
+    font-size: 1.02vw;
+    text-align: Left;
+    vertical-align: middle;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+.approvals-list-table-tr {
+    height: 4.4vw;
+    border: 0.5px solid #c4c4c4;
+}
+.approvals-list-table-header {
+    border-bottom: 1px solid #2687d7;
+}
+
+.approvals-entry-right-div .approvals-entry-add-btn {
+    background-color: #2687d7;
+    color: white;
+    width: 5.59%;
+    height: 2.1961932650073206vw;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border-radius: 0.14641288433382138vw;
+    border: none;
+    font-family: Arial;
+    font-style: normal;
+    font-size: 0.8337675872850442vw;
+    text-align: center;
+    vertical-align: middle;
+    margin: 1vw;
+    margin-top: 1.6vw;
+}
+.approvals-entry-right-div .approvals-entry-del-btn {
+    background-color: transparent;
+    color: black;
+    /* width: 1.0943199583116208vw;
+    height: 2.1961932650073206vw; */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border-radius: 0.14641288433382138vw;
+    border: none;
+    font-family: Arial;
+    font-style: normal;
+    font-size: 0.8337675872850442vw;
+    text-align: center;
+    vertical-align: middle;
+    margin: 0.5211047420531527vw;
+    margin-top: 0.9379885356956749vw;
+}
+
+.approvals-header-search-div input{
+    margin: 0.5vw;
+    width: 20vw;
+    border: 1px solid #C4C4C4;
+    outline:none;
+}
+
+#approvals .approvals-entry-div {
+    display: flex;
+
+}
+
+.approvals-list-div .approvals-list-table-option-btn {
+    color: #353a42;
+    background-color: #c4c4c4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2.72%;
+    width: 1.62%;
+    border-radius: 50%;
+    position: absolute;
+    cursor: pointer;
+}
+
+.approvals-list-div .approvals-list-table-option-menu {
+    list-style: none;
+    background: #f9f9f9;
+    border: 0.2px solid #b1cfe7;
+    width: 14%;
+    /* height: 23.98%; */
+    margin-left: 1%;
+    margin-top: 0.5%;
+    position: absolute;
+    font-size: 0.83vw;
+    padding-left: 0.1vw;
+}
+.approvals-list-div .approvals-list-table-option-menu li {
+    text-align: left;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-left: 0.1vw;
+    padding-top: 0.3vw;
+    padding-bottom: 0.3vw;
+    color: #353a42;
+}
+.approvals-list-div .approvals-list-table-option-menu li:hover {
+    color: #2687d7;
+    font-weight: 700;
+    cursor: pointer;
+}
+.approvals-footer-main-div {
+    border-top: 1px solid #239bcf;
+    bottom: 0px;
+    position: absolute;
+    height: 1.87vw;
+    width: 71.5%;
+    background-color: #fff;
+    /* display: flex;
+    flex-direction: row; */
+    font-size: 1.17vw;
+    vertical-align: middle;
+}
+.approvals-footer-main-div .approvals-footer-sub-div .approvals-footer-total {
+    height: 100%;
+    border-right: 0.07vw solid #0788bf;
+    width: 15%;
+    float: left;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.approvals-footer-main-div .approvals-footer-sub-div .approvals-footer-pagination-div {
+    height: 100%;
+    margin-left: 1vw;
+    width: 36%;
+    float: left;
+    align-items: center;
+}
+.approvals-footer-main-div .approvals-footer-sub-div .approvals-footer-btn-div {
+    height: 100%;
+    float: right;
+    align-items: center;
+}
+.approvals-footer-main-div .approvals-footer-sub-div .approvals-footer-btn-div button {
+    border: none;
+    height: 1.85vw;
+    /* border-right: 0.2px solid #0788bf; */
+}
+.approvals-footer-main-div .approvals-footer-sub-div .approvals-footer-btn-div vr {
+    border-left: 0.2px solid #0788bf;
+}
+
+
+.selectBox {
+    position: relative;
+  }
+  
+  .selectBox select {
+    width: 100%;
+    font-weight: bold;
+  }
+  
+  .overSelect {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+  
+  .checkboxes {
+    border: 1px #dadada solid;
+    position: absolute;
+    background-color: white;
+    z-index: 1;
+    width: 14vw;
+  }
+  
+  .checkboxes label {
+    display: flex;
+    align-items: center;
+    font-size: 0.72vw;
+    background-color: initial;
+    cursor: default;
+    appearance: auto;
+    box-sizing: border-box;
+    margin: 3px 3px 3px 4px;
+    padding: initial;
+    border: initial;
+  }
+  
+  .checkboxes label:hover {
+    background-color: #1e90ff;
+  }
+  .checkboxes p{
+    margin: 0;
+    margin-left: 0.5vw;
+  }
+  .multiSelectOption{
+   width: auto;
+  }

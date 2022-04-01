@@ -1,0 +1,223 @@
+.roles-main-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+
+.roles-list-container{
+    height: 100%;
+    width:26%;
+    position: relative;
+    border-right: 0.5px solid #239BCF;
+}
+
+.permissions-list-container{
+    height: 100%;
+    width: 72%;
+    position: relative;
+    border-right: 0.5px solid #239BCF;
+}
+
+.roles-header-text{
+    color: #353A42;
+    font-size: 0.84vw;
+    font-weight: bold;
+    padding-left: 1.4vw;
+}
+
+.roles-header-container{
+    width: 100%;
+    height: 5.7%;
+    width: 100%;
+    border-bottom: 0.5px solid #239BCF;
+    position: relative;
+}
+
+.roles-list-create-container{
+    height: 14.1%;
+    width: 100%;
+    position: relative;
+    border-bottom: 0.5px solid #239BCF;
+    padding: 1vh 0.89vw 1vh 1.4vw;
+}
+.roles-list-create-container button{
+    position: absolute;
+    bottom: 1vh;
+    right: 0.89vw;
+}
+
+.custom-role-input{
+    height: 3.35vh;
+    outline: none;
+    border: 1px solid #C4C4C4;
+    border-radius: 2px;
+    color: #353A42;
+    font-size: 0.78vw;
+    width: 100%;
+    padding-left: 0.5vw;
+}
+
+.custom-role-input::placeholder{
+    color: #C4C4C4;
+    font-size: 0.75vw;
+}
+.save-button:hover{
+    opacity: 0.7;
+}
+
+.roles-list-table-container{
+    height: 80.2%;
+    width: 100%;
+    padding-left: 1.4vw;
+    padding-right: 0.89vw;
+    padding-top: 2.7vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.role-td{
+    padding-bottom: 1vw;
+    color: #353A42;
+    font-size: 0.83vw;
+    padding-bottom: 1.2vh;
+    white-space:pre-line;
+    word-wrap:break-all
+}
+.role-td:hover{
+    color: #239BCF;
+}
+
+.locked{
+    width: 0.8vw;
+    position: absolute;
+    right: 0.89vw;
+}
+
+.permissions-type-container{
+    height: 94.3%;
+    width: 100%;
+    display: flex;
+}
+
+.permission-table{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+.permission-tbody{
+    height: calc (94.3% - 4.8vh)!important;
+}
+.permission-table-header-row{
+    height: 4.8vh;
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+    border-bottom: 0.5px solid #239BCF;
+}
+
+.permission-table-body-row{
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+    border-bottom: 0.5px solid #239BCF;
+}
+
+.permission-table-body-row td{
+    border-right: 0.5px solid #239BCF;
+}
+
+.permission-table-header-row th, .permission-table-body-row td{
+    border-right: 0.5px solid #239BCF;
+    text-align: center;
+    color: #2687D7;
+    font-size: 0.78vw;
+    font-style: normal;
+}
+
+.permission-table-header-row th:last-child, .permission-table-body-row td:last-child{
+    border-right: none;
+}
+.permission-table-header-row th:first-child{
+    padding-left: 3.17vw;
+    text-align: left;
+}
+.permission-table-body-row td:first-child{
+    text-align: left;
+}
+
+.permissions-module-type-container{
+    width: 100%;
+    position: relative;
+    display: flex;
+    padding-top: 1.63vh;
+    padding-bottom: 1.1vh;
+}
+.module-type-checkbox-container{
+    width: 3.17vw;
+    position: relative;
+    padding-left: 1.4vw;
+}
+
+ .input-checkkbox-permissions:checked {
+    background-color: white;
+    border: 0.5px solid #44B764;
+  }
+  .input-checkkbox-permissions:checked:after {
+    content: '\2713';
+    color:#44B764;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+  }
+  .input-checkkbox-permissions{
+    text-align: center;
+    vertical-align: middle;
+    height: 1.04vw!important;
+    width: 1.04vw!important;
+    appearance:none;
+    border-radius:10%;
+    border: 0.5px solid #C4C4C4;
+    cursor: pointer;
+    box-shadow: none;
+    font-size: 0.85vw;
+    font-weight: bold;
+    overflow:hidden;
+    position: relative;
+  }
+
+  .roles-module-open-close{
+      width: 0.85vw;
+  }
+
+  .roles-module-name-text{
+      padding-left: 0.52vw;
+      color: #353A42;
+      font-size: 0.83vw;
+      font-weight: bold;
+  }
+
+  .submodule-names{
+      color: #353A42;
+      font-size: 0.83vw;
+      padding-left: 1.37vw;
+      margin: 0;
+      padding-top: 0.5vh;
+  }
+  .checkbox-holder{
+      padding-top: 1.67vh;
+      vertical-align: top;
+  }
+
+  .checkbox-holder p:first-child{
+      padding-top: 1.04vw;
+  }
+  .checkbox-holder p{
+     margin: 0;
+     padding-top: 0.7vh;
+  }
+
+  .permission-reset:hover{
+    text-decoration: underline;
+  }

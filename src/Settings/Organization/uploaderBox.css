@@ -1,0 +1,73 @@
+.upload-box-modal {
+  background-color: #EBF6FF;
+  border: 0.2px solid #7C7C7C;
+  border-radius: 5px;
+  width: 31.5vw;
+  font-family: Arial;
+}
+.upload-box-modal  .upload-box-header {
+  width: 100%;
+  border-bottom: 2px solid #FF820E;
+  font-size: 1vw;
+  text-align: left;
+  padding: 1.4vh 2.25vw;
+  color: #353A42 ;
+  font-weight: bold;
+}
+.upload-box-modal  .upload-box-content {
+  width: 100%;
+  padding: 2.3vh 2.25vw 2.3vh 2.25vw;
+  border-bottom: 2px solid #FFFFFF;
+}
+.upload-box-modal .upload-box-actions {
+  width: 100%;
+  padding: 1.45vh 2.25vw 2.3vh 2.25vw;
+  display: flex;
+}
+.upload-close-button{
+  border-radius: 2px!important;
+  padding: 0.4vh 0.6vw!important;
+}
+
+.upload-close-button:hover{
+  opacity: 0.8;
+
+}
+
+.upload-box-text{
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.78vw;
+  color: #7C7C7C;
+  
+}
+.upload-box-text .imp-text-upload-box{
+  color: #2687D7!important;
+  font-size: 0.77vw;
+
+}
+
+.browse-button{
+  padding: 0.5vh 0.5vw!important;
+  font-size: 0.75vw;
+  background: #353A42!important;
+  margin-left: 0.5vw;
+}
+
+.browse-button-container label{
+  border: none!important;
+  min-width: 0!important;
+}
+
+.files-name-upload-box{
+  text-align: center;
+  padding-bottom: 1vh;
+  color: #FF820E;
+  cursor: pointer;
+}
+
+.upload-file-box-delete{
+  transform: translate(0%, 0%)!important;
+  width: 0.9vw;
+  margin-left: 0.7vw;
+}

@@ -1,0 +1,60 @@
+.file-viewer-parent{
+    width: 94vw!important;
+    position: relative;
+    background-color: white!important;
+}
+
+.close-cross-button{
+    right: 2vw;
+    position: absolute;
+    cursor: pointer;
+    width:1.2vw;
+    height: 1.2vw;
+    fill: #2687D7;
+    top:1.6vh;
+}
+
+.close-cross-button:hover{
+    opacity: 0.7;
+}
+.upload-box-header{
+    color: #2687D7!important;
+}
+
+.file-viewer-content{
+    border-bottom: 2px solid #FF820E!important;
+    position: relative;
+    min-height: 80vh;
+    background: url('../../assets/images/file-loader.gif') no-repeat;
+    background-position: center center;
+}
+
+.image-view-class{
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    max-height: 78vh;
+    max-width: 90vw;
+    position: absolute;
+    background-color: white;
+}
+
+.pdf-viewer{
+    min-height: 90vh;
+}
+
+.file-view-actions{
+    text-align: right!important;
+    display: block!important;
+}
+
+.file-action-images{
+    width: 2vw;
+    margin-left: 1vw;
+    cursor: pointer;
+}
+
+.file-action-images:hover{
+    opacity: 0.6;
+
+}

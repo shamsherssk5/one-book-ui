@@ -1,0 +1,20 @@
+.myscrollbar {
+  cursor: pointer;
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(13deg, rgba(215, 49, 38, 0.12) 14%, rgba(215, 49, 38, 0.12) 64%);
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(13deg, rgba(215, 49, 38, 0.12) 14%, #E5F1FA 64%);
+  }
+  ::-webkit-scrollbar-track {
+    background: #ffffff;
+    border-radius: 3px;
+    box-shadow: inset 4px 7px 9px #e6e6e6;
+  }
+
+}

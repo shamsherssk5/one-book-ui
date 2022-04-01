@@ -1,0 +1,102 @@
+@media (min-width: 1200px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl {
+    max-width: 900px;
+  }
+}
+.sign-in-from {
+  padding: 0 50px;
+}
+@media (max-width: 1920px) {
+  .sign-in-page {
+    height: 100%;
+  }
+  .sign-in-detail {
+    height: 100%;
+  }
+  .sign-in-from {
+    padding: 0 50px;
+  }
+  .sign-up-logo {
+    padding-top: 15px;
+  }
+}
+@media only screen and (min-width: 1800px) and (max-width: 1920px) {
+  .container {
+    margin-top: 6% !important;
+  }
+  body {
+    font-size: 16px;
+  }
+  h3.sign-in {
+    font-size: 24px;
+  }
+  .blockline::before {
+    content: "\2014\2014\00A0\00A0";
+  }
+  .blockline::after {
+    content: "\00A0\00A0\2014\2014";
+  }
+}
+
+@media (max-width: 1199px) {
+  .sign-in-from {
+    padding: 10px 30px;
+  }
+  .sign-in-detail {
+    padding: 20px 50px;
+  }
+  .container {
+    margin-top: 20px !important;
+  }
+}
+@media (max-width: 991px) {
+  .sign-in-from {
+    padding: 10px 30px;
+  }
+  .welcome-text {
+    font-size: 24px !important;
+  }
+  .sign-in-detail {
+    padding: 10px 0 !important;
+    img {
+      margin-left: -30px !important;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .sign-info {
+    text-align: center;
+  }
+  .sign-in-from button {
+    margin-top: 10px;
+  }
+  .sign-in-from {
+    padding: 10px 80px;
+  }
+  .auth-comic {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    margin: 0 !important;
+  }
+  .sign-info {
+    text-align: center;
+    margin-bottom: 28px;
+  }
+  .sign-in-from button {
+    margin-top: 10px;
+  }
+  .auth-comic {
+    display: none;
+  }
+  .sign-in-from {
+    padding: 20px;
+  }
+}

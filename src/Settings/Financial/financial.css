@@ -1,0 +1,30 @@
+#financial {
+    font-family: Arial;
+    font-style: normal;
+    text-align: left;
+    vertical-align: middle;
+    overflow-x: hidden;
+}
+.financial-main-container {
+    /* border: 1px solid; */
+    margin-top: 2.2%;
+    margin-left: 16.68%;
+    width:35.1%;
+}
+
+.financial-main-container .financial-left-div .taxLabel{
+    font-family: Arial;
+    font-style:normal;
+    font-weight: 600;
+    font-size: 0.83vw;
+    text-align: left;
+    vertical-align: middle;
+    color: #2687D7;
+    padding-bottom: 1vh;
+}
+.financial-main-container  .financial-left-div .financial-form-left-bottom-div{
+    position: absolute;
+    top: 92.12%;
+    left: 90.93%;
+
+}

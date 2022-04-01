@@ -1,0 +1,220 @@
+.task-form-container{
+  text-align: left;
+  font-family: Arial;
+}
+.create-task-container fieldset legend{
+  padding-left: 0.26vw;
+  padding-right: 1.3vw;
+  float: none!important;
+  width: auto;
+  font-size: 0.76vw;
+  font-weight: normal;
+  color: #353A42;
+  margin: 0!important;
+}
+.create-task-container select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+ .create-task-container select:invalid {
+  color: #C4C4C4!important;
+  }
+  .create-task-container option[value=""][disabled] {
+    display: none;
+  }
+.create-task-container input{
+    border: none;
+    outline: none;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    cursor: pointer;
+    font-size: 0.76vw;
+    color:#2687D7; 
+    font-weight: normal;
+    padding-left: 0.26vw;
+
+}
+
+.create-task-container input::placeholder,#notes::placeholder{
+    font-size: 0.76vw;
+    color: #C4C4C4;
+    font-weight: normal;
+}
+.create-task-container .title option{
+  font-size: 0.78vw;
+  color: #353A42; 
+  cursor: pointer;
+  text-indent: 5px;
+}
+.create-task-container fieldset{
+   padding-left: 0.63vw;
+   margin-bottom:2vh;
+   padding-top: 0.7vh;
+   padding-bottom: 1vh;
+   border: 1px solid #C4C4C4;
+   border-radius: 3px;
+   text-align: left;
+   font-size: 0.76vw;
+   color: #C4C4C4;;
+   font-weight: normal;
+}
+.create-task-container .title{
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    padding-left: 0.26vw;
+    color: #2687D7;
+}
+
+#notes{
+  resize: none;
+  border: none;
+  outline: none;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  font-size: 0.76vw;
+  color:#2687D7; 
+  font-weight: normal;
+}
+
+.file-uploader-box label{
+  min-width: auto!important;
+  font-size: 9px!important;
+  font-weight: bold;
+}
+
+.warning-text-create{
+  padding-left: 10px!important;
+}
+
+.submit-button{
+  left:50%;
+  transform: translate(-50%,0%);
+  position: absolute;
+  width: auto !important;
+  vertical-align: middle;
+  text-align: center;
+  padding: 4px 15px !important;
+  font-size: 0.85vw!important;
+  font-weight: bold!important;
+  background: #2687D7;
+  border-radius: 2px;
+  color: #fff !important;
+}
+
+.submit-button-container{
+  padding-top: 1vh;
+  padding-bottom: 25px;
+}
+
+.file-create{
+  border: 1px solid #737373!important;
+  padding-bottom: 7px;
+  opacity: 0.5;
+}
+
+.drop-area-create.drop-area{
+    border:none!important;
+}
+
+.files-uploader-container-create{
+    margin-top: 30px;
+    border-top: 1px solid #737373;
+}
+
+.warning-text-error{
+  position: relative!important;
+  padding-left: 10px !important;
+  font-size: 10px!important;
+  color: red!important;
+}
+
+.calendar-closee{
+   text-align: right;
+   right: 0.6vw;
+   position: absolute;
+   cursor: pointer;
+   font-size: 0.9vw!important;
+   font-weight: bold;
+   color: #353A42;
+}
+.calendar-closee:hover{
+  opacity: 0.5;
+}
+
+select option:checked,
+select option:hover {
+    box-shadow: 0 0 10px 100px #000 inset!important;
+}
+
+.create-task-container .searchWrapper{
+  padding: 0!important;
+  min-height: auto!important;
+  border: none!important;
+}
+
+.create-task-container .multiSelectContainer input.checkbox{
+  margin-top: 0!important;
+  width: auto!important;
+  margin-right: 0.5vw;
+}
+
+.create-task-container .multiSelectContainer li{
+  color: #353A42!important;
+  padding: 0.5vh 0.5vw!important;
+  font-size: 00.78vw;
+}
+.create-task-container .multiSelectContainer ul{
+  padding-top: 0.5vh!important;
+}
+.create-task-container .chip{
+  background-color: #52a0e0!important;
+  font-size:0.75vw!important;
+  font-weight: 400!important;
+}
+
+.create-task-container .multiSelectContainer li:hover{
+  background-color:rgba(0, 0, 0, 0.1)!important;
+}
+
+.create-task-container .multiSelectContainer li.selected{
+  border: none!important;
+  color: #239BCF!important;
+}
+
+
+.create-task-container .multiSelectContainer input.checkbox:checked {
+  background-color: white;
+  border: 0.5px solid #44B764;
+}
+.create-task-container .multiSelectContainer input.checkbox:checked:after {
+  content: '\2713';
+  color:#44B764;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+.create-task-container .multiSelectContainer input.checkbox{
+  text-align: center;
+  vertical-align: middle;
+  height: 1.04vw!important;
+  width: 1.04vw!important;
+  appearance:none;
+  border-radius:10%;
+  border: 0.5px solid #C4C4C4;
+  cursor: pointer;
+  box-shadow: none;
+  font-size: 0.85vw;
+  font-weight: bold;
+  overflow:hidden;
+  position: relative;
+}
+

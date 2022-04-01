@@ -1,0 +1,101 @@
+.users-list-add-container{
+    height: 100%;
+    position: relative;
+    width: 100%;
+    font-family: Arial;
+}
+
+.user-header-container{
+    height: 5.7%;
+    width: 100%;
+    display: flex;
+    position: relative;
+    border-bottom: 0.5px solid #2687D7;
+}
+
+.users-add-container{
+    height: 14.1%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    border-bottom: 0.5px solid #2687D7;
+}
+
+.users-add-container form{
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+
+.users-list-container{
+    height: 80.2%;
+    width: 100%;
+    position: relative;
+}
+
+.usr-count-text{
+    font-size: 0.84vw;
+    color: #2687D7;
+    font-weight: bold;
+    padding-left: 1.4vw;
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+
+}
+
+.search-users{
+    bottom: 50%!important;
+    right: 1.4vw!important;
+    transform: translateY(50%);
+}
+
+.user-create-table td{
+    width:20%;
+    display: table;
+    table-layout: fixed;
+}
+
+.users-equal-div{
+    width: 20%;
+    position: relative;
+    height: 100%;
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+}
+
+.users-equal-div button, .users-equal-div fieldset, .users-equal-div img{
+    top:50%;
+    position: relative;
+    transform: translateY(-50%);
+}
+
+.users-equal-div fieldset{
+    transform: translateY(-55%);
+}
+
+.user-entry-new-Btn{
+    padding: 0.8vh 1vw!important;
+    border-radius: 3px!important;
+}
+
+.user-entry-new-Btn:hover{
+    opacity: 0.7;
+}
+
+.user-add-close{
+    padding-left: 1vw;
+    height: 2.5vh;
+    position: absolute;
+    margin-top: -1.25vh;
+}
+
+.users-list-th{
+    background: none!important;
+    border-bottom: 0.5px solid #2687D7 !important;
+}
+
+.users-list-th th:first-child,.users-list-tr td:first-child{
+    padding-left: 1.4vw!important;
+}
+

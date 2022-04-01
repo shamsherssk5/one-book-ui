@@ -1,0 +1,32 @@
+.react-calendar{
+    font-size: 0.76vw!important;
+}
+
+.react-date-picker__calendar,.react-date-picker__wrapper{
+    width: 17vw!important;
+    cursor: pointer;
+}
+
+.react-date-picker__wrapper{
+    width: 15vw!important;
+}
+
+.react-date-picker__wrapper{
+    border: none!important;
+}
+
+
+.react-calendar__navigation button{
+    min-width: 2vw!important;
+}
+
+.react-calendar__navigation{
+    margin-bottom: 0!important;
+    height: 42px!important;
+}
+
+.customer-licence-expiry .react-calendar{
+    margin-left: -45%;
+    margin-top: -100%;
+    position: absolute;
+}

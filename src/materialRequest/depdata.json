@@ -1,0 +1,46 @@
+[
+    {
+        "depID": "DEP01",
+        "name" : "Design",
+        "colour":"green"
+    },
+
+    {
+        "depID": "DEP02",
+        "name" : "Production",
+        "colour":"black"
+    },
+    {
+        "depID": "DEP03",
+        "name" : "Purchase",
+        "colour":"black"
+
+    },
+    {
+        "depID": "DEP04",
+        "name" : "Estimation",
+        "colour":"green"
+    },
+    {
+        "depID": "DEP05",
+        "name" : "Sales",
+        "colour":"Yellow"
+    },
+    {
+        "depID": "DEP06",
+        "name" : "Hr",
+        "colour":"red"
+    },
+    {
+        "depID": "DEP07",
+        "name" : "Logistics",
+        "colour":"blue"
+    },
+    {
+        "depID": "DEP08",
+        "name" : "Undefined",
+        "colour":"orange"
+
+    }
+
+]

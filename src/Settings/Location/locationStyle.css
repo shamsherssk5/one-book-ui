@@ -1,0 +1,22 @@
+#location {
+    font-family: Arial;
+}
+.location-main-container{
+    margin-top: 8%;
+    margin-left: 16.68%;
+    width:35.1%;
+}
+
+.location-main-container  .location-entry-div .location-form-entry-bottom-div{
+    position: absolute;
+    top: 92.12%;
+    left: 90.93%;
+
+}
+
+.location-text{
+    font-weight: 600;
+    font-size: 0.85vw;
+    color: #FF820E;
+    padding-left: 0.89vw;
+}

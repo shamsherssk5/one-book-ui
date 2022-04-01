@@ -1,0 +1,238 @@
+.taskCategoryContainer{
+    height:97.7%;
+    width:93.5%;
+    display: flex; 
+    overflow-x: hidden; 
+    overflow-y: hidden;
+    scroll-behavior: smooth;  
+}
+
+.left-right-arrow-container{
+    width: 3.25%;
+    height:97.7%;
+    position: relative;
+}
+.empty-category{
+    height:97.7%;
+    width:0.5%;
+    min-width: 4px;
+}
+
+.left-right-arrow{
+    cursor: pointer;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width: 50%;
+}
+.left-div-content{
+    display: flex;
+}
+
+.left-div-content.filter-left{
+    height: 73.7%!important;
+}
+
+.left-filter-view{
+    height: 12.8%;
+    width: 100%;
+    position: relative;
+}
+
+.filter-view-container{
+    height: 82.3%;
+    top:0;
+    left:8.4%;
+    width: 83.2%;
+    position: relative;
+    background: #FFFFFF;
+    border: 0.5px solid #2687D7;
+    border-radius: 5px;
+    border-top: none;
+}
+
+.filter-view-inner-container{
+    top:18%;
+    height: 57%;
+    position: relative;
+    left:5.3%;
+    width: 93.5%;
+}
+
+.filter-table tr{
+    width:100%;
+    height: 100%;
+}
+.search-button-text::placeholder{
+    color:#C4C4C4!important;
+    padding-left: 0.2vw;
+    font-size: 0.7vw;
+}
+.react-date-picker__inputGroup__input:invalid{
+    background-color: white!important;
+}
+.react-date-picker__inputGroup__input{
+    pointer-events: none!important;
+}
+.filter-td{
+    width:14.285%;
+    padding-right: 0.4vw;
+    position: relative;
+    color: #C4C4C4!important;
+}
+.filter-td .title{
+    font-weight: normal!important;
+    color: #353A42!important;
+}
+.filter-td input{
+    color: #353A42!important;
+}
+
+.filter-td select:invalid {
+    color: #C4C4C4!important;
+}
+
+.filter-fieldset fieldset{
+    padding-top: 0!important;
+    padding-bottom: 0.4vh!important;
+    color: #C4C4C4!important;
+    padding-left: 0.25vw!important; 
+}
+.filter-fieldset fieldset legend{
+    color: #2687D7!important;
+    padding-right: 0.5vw!important;
+    font-size: 0.73vw!important;
+}
+
+.save-button.filter-text{
+    padding: 2px 9px!important;
+    font-size: 0.73vw!important;
+}
+
+.filter-text-container{
+    position: absolute;
+    transform: translate(10%,-75%);
+}
+.filter-clear-button{
+    cursor: pointer;
+    width: 1.09vw;
+    position: absolute;
+    transform: translate(0%,-75%);
+}
+
+.left-list-view-box{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    
+}
+.search-button-text{
+    right: 3.6%!important;
+    position: absolute;
+    bottom:7%;
+    padding: 0;
+    outline: none;
+    border: none;
+    border-bottom: 0.2px solid #239BCF;
+    font-size: 0.85vw;
+    width: 20%;
+}
+
+.template{
+    right: 3.6%!important;
+    position: absolute;
+    bottom:7%;
+}
+
+.left-list-view-container{
+    top:0;
+    height: 98%;
+    left:1%;
+    width: 98%;
+    position: relative;
+    border:0.5px solid #239BCF;
+    border-top: none;
+}
+.popup p{
+    margin: 0px !important;
+    cursor: pointer;
+    border-bottom: 0.5px solid #C4C4C4;
+    padding: 0.7vh 7vw 0.7vh 0.6vw;
+    font-size: 0.78vw;
+    color: #353A42;
+    font-family: Arial;
+}
+
+.popup p:last-child{
+    border: none;
+}
+
+.popup p:hover{
+    color: #009DB2;
+    background-color: rgba(229, 241, 250,.14);
+    font-weight: bold;
+}
+
+.search-button{
+    right: 3.6%!important;
+    height: auto!important;
+}
+
+.filter-button{
+    height: auto!important;
+}
+
+.filter-td .react-date-picker__wrapper{
+    width: 8vw!important;
+}
+
+.page-loader{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 50000;
+    background-color:rgba(0, 0, 0, 0.8);
+}
+
+.page-loader-content{
+    top:25%;
+    left:50%;
+    position: absolute;
+    transform: translate(-50%,0%);
+    z-index: 6;
+}
+
+.page-loader-text{
+    width: 100%;
+    font-family: Arial;
+    font-size: 1vw;
+    color: #2687D7;
+    font-weight: bold;
+    margin-top: 1.5vh;
+    letter-spacing: 1px;
+    text-align: center;
+    position: absolute;
+    word-wrap: none;
+}
+
+.assignByMe{
+    position: absolute;
+    color: #FFFFFF;
+    top: 33%;
+    right: 6.09vw;
+    transform: translate(0,-20%);
+    width:1.56vw;
+    animation: transform 10s linear;
+}
+.assignByMe:hover{
+    opacity: 0.9;
+}
+
+/* .tooltip-arrow {
+    display: none !important;
+}
+
+.popover-arrow{
+    display: none!important;
+} */

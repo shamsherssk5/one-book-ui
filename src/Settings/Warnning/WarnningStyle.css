@@ -1,0 +1,83 @@
+.warn-main-conainer {
+    background-color: rgba(0, 0, 0, 0.28);
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    height: 100%;
+    width: 72%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.warnnig-msg-div {
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+    background-color: #fff;
+    height: 70%;
+    width: 25%;
+}
+.warnnig-msg-div .warnnig-img-div {
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.warnnig-msg-div .warnnig-desc-div {
+    height: 15%;
+    font-size: 0.78vw;
+    color: #353a42;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    vertical-align: middle;
+}
+.warnnig-msg-div  .warnnig-btn-div {
+    height: 25%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.warnnig-msg-div .warnnig-msg-labal {
+    height: 10%;
+    color: #ff820e;
+    text-align: center;
+    vertical-align: middle;
+}
+.warnnig-btn-div .warnnig-btn-no {
+    width: 4vw;
+    height: 1.56vw;
+    background: #2687d7;
+    border-radius: 0.1vw;
+    color: #fff;
+    text-shadow: none;
+    font-size: 0.83vw;
+    cursor: pointer;
+    display: inline-block;
+    outline: 0;
+    border: none;
+    vertical-align: baseline;
+    font-weight: 700;
+    text-align: center;
+}
+.warnnig-btn-div .warnnig-btn-yes {
+    width: 4vw;
+    height: 1.56vw;
+    background: #f94444;
+    border-radius: 0.1vw;
+    color: #fff;
+    text-shadow: none;
+    font-size: 0.83vw;
+    cursor: pointer;
+    display: inline-block;
+    outline: 0;
+    border: none;
+    vertical-align: baseline;
+    font-weight: 700;
+    text-align: center;
+}
+.warnnig-msg-div .warnnig-footer-line {
+    margin: 0;
+    border:1px solid #ffc086;
+    opacity: 1;
+}

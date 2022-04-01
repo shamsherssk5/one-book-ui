@@ -1,0 +1,207 @@
+.paging-container ul
+{ 
+    overflow-x:hidden;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.paging-container ul li{
+    display: none;
+}
+
+.paging-container ul li button{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    background-color: transparent;
+    display: inline-block;
+    position: relative;
+}
+
+.paging-container ul li.next{
+    display: inline!important;
+}
+.paging-container ul li.previous{
+    display: inline!important;
+}
+
+.list-container-box{
+    width: 100%;
+    top:0;
+    height: 94%;
+    position: relative;
+}
+
+.list-view-table{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.list-view-header-row{
+    width: 100%;
+    color: #187ACB;
+    font-size: 0.8vw;
+    border-bottom: 1px solid #C4C4C4;
+    background: #F1F1F1;
+    cursor: pointer;
+    display: table;
+    table-layout: fixed;
+}
+
+.list-view-header-row th:nth-child(1),.task-list-row-container td:nth-child(1),.border-td{
+    padding-left: 0.8vw;
+    /* border-left:0.8vw solid white; */
+}
+.list-view-header-row th:last-child,.task-list-row-container td:last-child,.border-td{
+    padding-right: 0.8vw;
+}
+
+.border-td div{
+    width: 100%;
+    border-bottom: 0.2px solid #C4C4C4;
+    position: relative;
+}
+.list-view-header-row th{
+    padding: 0.65vw 0;
+}
+
+.task-list-row-container {
+   width: 100%;
+   font-size: 0.8vw;
+   font-weight: normal;
+   background: #FFFFFF;
+   color: #353A42;
+   cursor: pointer;
+   display: table;
+   table-layout: fixed;
+}
+.empty-row-container{
+   width: 100%;
+   display: table;
+   table-layout: fixed;
+
+}
+.tbody-class{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: block;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+.task-list-row-container:hover{
+    background-color: rgba(229, 241, 250,.5);
+}
+
+.task-list-row-container td{
+    padding: 1.6vh 0 0.6vh 0;
+    position: relative;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow:hidden;
+}
+
+.ref-subject-container p{
+    padding: 0!important;
+    margin: 0!important;
+    outline: none;
+    border: none;  
+}
+
+.list-subject{
+    font-weight: bold!important;
+    color: #187ACB!important;
+}
+.list-category{
+    width:70%;
+    position: relative;
+    text-align: center;
+    font-weight: bold;
+}
+
+.paging-container{
+    height: 6%;
+    width: 100%;
+    overflow-y: hidden;
+    position: relative;
+    
+}
+.paging-container-box{
+    height: 100%;
+    left:0.5%;
+    width: 99%;
+    position: relative;
+    border-top:0.5px solid #239BCF;
+    display: flex;
+    color: #353A42;
+    font-size: 0.8vw;
+}
+
+.table-paginge-container{
+    height: 100%;
+    width: 100%;
+}
+
+.items-count{
+    height: 100%;
+    padding-left: 0.342vw;
+    border-right:0.5px solid #239BCF;
+    white-space: nowrap;
+    padding-right: 0.65vw;
+
+}
+
+.page-num{
+    padding-left: 0.65vw!important;
+}
+
+.next-button{
+    height: 60%;
+    padding-right: 0.342vw;
+    padding-left: 0.342vw;
+}
+.next-text{
+    padding-left: 0.65vw;
+    border-left: 0.5px solid #239BCF;
+}
+
+.prev-text{
+    padding-right: 0.65vw;
+}
+.sort{
+    width: 0.5vw;
+    margin-left: 0.15vw;
+    position: relative;
+}
+
+.sort.sort-flip{
+    transform: rotate(-180deg);
+    position: relative;
+}
+.vertical-dots{
+    width: 0.2vw;
+}
+
+.items-select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    text-align: center;
+    /* border: 0.1px solid #239BCF; */
+    /* padding-left: 3px;
+    padding-right: 3px; */
+    border: none; 
+}
+.list-container-box input.chkbx{
+    height: 0.7vw;
+    width: 0.7vw;
+}

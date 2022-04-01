@@ -1,0 +1,57 @@
+.comp-name-alias {
+  color: #187acb;
+  font-weight: bold;
+}
+.react-tel-input .form-control {
+  border: none !important;
+  width: 100% !important;
+  padding-left: 2.3vw!important;
+  font-size: 0.8vw!important;
+  height: 1.81vh!important;
+}
+.phonebook-details1 {
+  display: flex;
+  width: 100%;
+  height: auto;
+}
+.thumb {
+  width: 1.5vw;
+}
+.phonebook-search {
+  right: 1.5% !important;
+  display: inline-block;
+}
+
+.phonebook-contact-add{
+  width:1.3vw;
+  top: calc(50% - 0.75vh);
+  position: absolute;
+  transform: translateY(-50%);
+  right: 2px;
+}
+
+.flag-dropdown{
+  border: none!important;
+  background-color: white!important;
+}
+
+.react-tel-input .selected-flag{
+  padding: 0!important;
+  padding-left: 0.38vw!important;
+  width: 1.04vw!important;
+
+}
+
+
+.additional-text{
+  font-size: 0.83vw;
+  color: #187acb;
+  border: 0.2px solid #187acb;
+  border-radius: 15px;
+  padding:1vh;
+  background-color: #F9F9F9;
+}
+
+.additional-text:hover{
+  opacity: 0.85;
+}

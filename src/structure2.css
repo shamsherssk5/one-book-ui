@@ -1,0 +1,42 @@
+.temp2Setting{
+    background: #FFFFFF;
+    border: 0.5px solid #C4C4C4;
+    box-sizing: border-box;
+    backdrop-filter: blur(4px);
+    border-radius: 5px;
+    position: relative;
+}
+
+.settings-content-box{
+    top: 17.62%;
+    height: 82.38%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+}
+
+.setting-content-left-box{
+    height: 100%;
+    width: 25%;
+    border-right: 0.5px solid #239BCF;
+}
+
+.setting-content-right-box{
+    height: 100%;
+    width: 75%;
+}
+.setting-left{
+    left:8.08%;
+}
+
+.setting_g_plus{
+    left:16.3%;
+}
+
+.empty-div{
+    top:13.5%;
+    height: 4.12%;
+    width: 100%;
+    border-bottom: 0.5px solid #239bcf;
+    position: absolute;
+}

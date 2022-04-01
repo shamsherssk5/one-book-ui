@@ -1,0 +1,84 @@
+.org-main-container {
+    text-align: left;
+    font-family: Arial;
+}
+.org-main-container .org-form-container {
+    margin-top: 2.2%;
+    margin-left: 16.68%;
+    width:35.1%;
+}
+.org-main-container .org-form-left-Top-div {
+    top: 9.87%;
+    left: 77.1%;
+    position: absolute;
+    font-size: 0.72vw;
+}
+.org-main-container .org-form-left-Top-div img {
+    border: 0.05vw solid #c4c4c4;
+    top: 1vw;
+    height: 6.61vw;
+    width: 6.51vw;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-align: center;
+    vertical-align: middle;
+}
+.org-main-container .org-form-left-Top-div .imgSpan {
+    width: 6.51vw;
+    border: 1px solid #c4c4c4;
+    height: 6.61vw;
+}
+.org-main-container .org-form-left-Top-div .org-form-left-Top-div-btn {
+    padding-left: 0.5vw;
+}
+.org-main-container .org-form-left-Top-div .org-form-left-Top-div-btn button {
+    font-family: Arial;
+    display: block;
+    width: 7vw;
+    height: 1.56vw;
+    margin-left: .25vw;
+    margin-top: 0.44vw;
+    margin-bottom: 0.88vw;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background-color: #E5E5E5;
+    color: #353A42;
+    border:none;
+    font-weight: 700;
+    font-size: 0.83vw;
+    border-radius: 2px;
+}
+
+.org-main-container .org-form-container .org-form-left-bottom-div {
+    position: absolute;
+    top: 92.12%;
+    left: 90.93%;
+}
+.org-main-container  .org-form-container .org-form-left-bottom-div button, #next {
+    padding: 0.4vh 1vw;
+    background: #2687d7;
+    border-radius: 3px;
+    color: #fff;
+    text-shadow: none;
+    font-size: 0.83vw;
+    cursor: pointer;
+    display: inline-block;
+    outline: 0;
+    border: none;
+    vertical-align: baseline;
+    font-weight: 700;
+    text-align: center;
+}
+
+.org-main-container button:hover, #next:hover{
+    opacity: 0.8;
+}
+
+.error-upload-box{
+    text-align: center;
+    padding: 1vw;
+    font-size: 0.85vw;
+    font-family: Arial;
+    font-weight: bold;
+}

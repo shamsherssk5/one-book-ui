@@ -1,0 +1,53 @@
+/*---------------------------------------------------------------------
+                               Sign In
+-----------------------------------------------------------------------*/
+.sign-in-detail {
+  color: var(--iq-white);
+  background: var(--iq-primary-light) 0% 0% no-repeat padding-box !important;
+  border-radius: 0px 27px 26px 0px;
+}
+.sign-in-page {
+  height: 100vh;
+}
+.sign-in-detail {
+  padding-top: 60px;
+  // height: 100vh;
+}
+.sign-in-logo {
+  display: inline-block;
+  width: 100%;
+}
+.sign-in-logo img {
+  height: 50px;
+}
+
+.iq-social-media {
+  margin: 0;
+  padding: 0;
+  float: right;
+}
+.iq-social-media li {
+  list-style: none;
+  float: left;
+  margin-right: 10px;
+}
+.iq-social-media li:last-child {
+  margin-right: 0;
+}
+.iq-social-media li a {
+  height: 30px;
+  width: 30px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 30px;
+  display: inline-block;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  background: var(--iq-bg-light-color);
+}
+.iq-social-media li a:hover {
+  text-decoration: none;
+}
+
+

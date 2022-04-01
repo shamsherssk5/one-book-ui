@@ -1,0 +1,407 @@
+.details-header{
+   text-align: left;
+   padding-left: 20px;
+   height: 10%;
+   border-bottom: 1px solid #0066cc ;
+   font-size: 16px;
+   font-weight: bold;
+}
+
+.task-details-container{
+   top:16px;
+   left:6.48%;
+   height: auto;
+   width: 88.7%;
+   position: relative;
+}
+
+.task-details-box{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow-y: auto!important;
+    overflow-x: hidden;
+    scroll-behavior: smooth;  
+}
+.empty-details-container{
+    border-bottom: 1.5vh solid #F9F9F9;
+    height: 5vh;
+}
+.details-container{
+    text-align: left;
+}
+.equalDivide{
+    width:100%;
+}
+.equalDivide tr{
+    height: 1.7vh;
+}
+
+.left-td { 
+    width:65%;
+}
+.right-td { 
+    width:35%;
+}
+.table-heading{
+    color: #353A42;
+    font-size: 0.8vw;
+    font-weight: normal;
+}
+
+.categoryTd{
+    padding: 3px 6px 3px 6px;
+    color:#FFFFFF!important;
+    font-size: 0.8vw;
+    font-weight: bold;
+}
+
+.category-dark{
+    font-weight: bold;
+}
+.blue-heading{
+    color: #2687D7;
+    font-size: 0.84vw!important;
+    font-weight: bold;
+}
+.messages{
+    top:25px;
+    display: block;
+    background-color: #FFFFFF;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.message-Heading{
+    width: 100%;
+    font-size: 1.14vw;
+    font-weight: bold;
+    color: #353A42;
+    padding-bottom: 12px;
+}
+.message-content{
+    width: 100%;
+    display: block;
+    background: #FFFFFF;
+    border: 0.5px solid #C4C4C4;
+    box-sizing: border-box;
+}
+
+.react-chat-frame{
+    z-index: 0!important;
+    position: relative!important;
+    height: 245px!important;
+}
+
+.react-chat-bubble{
+    font-size: 0.7vw!important;
+}
+.react-chat-rightBubble{
+    background-color: #6c757d!important;
+    border-color: #6c757d!important;
+    color: #fff !important;;
+}
+.react-chat-close-icon{
+    display: none!important;
+}
+.react-chat-viewerBox{
+    width: auto!important;
+    border:none!important;
+}
+
+.react-chat-messagesListContent{
+    padding: 4px 1px 4px 4px!important;
+}
+.react-chat-frame-wrapper{
+    margin: 0px!important;
+}
+.react-chat-additional{
+    font-size: 0.6vw!important;
+    padding-right: 6px!important;
+    padding-left: 6px!important;
+}
+.react-chat-avatar{
+    width: 1.3vw!important;
+    height: 1.3vw!important;
+    bottom: 20%!important;
+}
+
+.react-chat-messageBoxRight{
+    padding-right: 23px!important;
+}
+
+.react-chat-messageBoxLeft{
+    padding-left: 23px!important;
+}
+
+.react-chat-messagesList{
+    max-height: 225px!important;
+    overflow-y: auto;
+    border-color: #C4C4C4!important;
+    border-width: 0.5x;
+}
+.react-chat-inputBox{
+    padding: 2px!important;
+    overflow: hidden;
+}
+
+.react-chat-inputBox button{
+    height: 15px!important;
+    width: 15px!important;
+    top:50%;
+    left:98%;
+    position: absolute;
+    transform: translate(-100%,-50%);
+}
+.react-chat-inputBox{
+    padding-left: 8px!important;
+    position: relative;
+}
+
+.file-uploader-box label{
+    padding: 0px!important;
+    border: none!important;
+    height: 100px;
+    width: auto;
+    min-width: 50px!important;
+    top:0;
+    left:0;
+}
+
+.file-uploader-box{
+    height: 4.5vh!important;
+    width: 100%!important;
+    display: flex;
+    background: #FFFFFF;
+    border: 1px solid #2687D7;
+    box-sizing: border-box;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.file-upload-container{
+    height: 100%;
+    width: 88%;
+    font-size: 0.73vw;
+    color: #353A42;
+    font-weight: bold;
+    position: relative;
+}
+.file-upload-container input{
+    display: block;
+    visibility: hidden;
+}
+.upload-button-container{
+    height: 100%;
+    width: 12%;
+    position: relative;
+    background-image: url("../assets/upload.png");
+    background-position: center center;
+    background-size: 100%;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-color:#2687D7 ;
+}
+
+
+.drop-area{
+    top: calc(2.25vh - 0.5vw);
+    left:5%;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    font-size: 0.65vw;
+}
+.warning-text{
+    padding: 0!important;
+    font-size: 0.65vw;
+    font-weight: bold;
+    color: #2687D7;
+    position: relative;
+}
+
+.attachments-container{
+    position: relative;
+    padding-bottom: 1.2vw;
+    top:0!important;
+}
+
+.files-viewer-container{
+    height: 10%;
+    width: 100%;
+    display: flex;
+    padding-top: 5px;
+    padding-bottom: 15px;
+}
+
+.files-image-container{
+    height: 100%;
+    text-align: left;
+    margin-right: 2px;
+    width: 10%;
+}
+.delete-button-container{
+    height: 100%;
+    width: 90%;
+    position: relative;
+    border-bottom: 0.5px solid #C4C4C4;
+    display: flex;
+    padding-bottom: 1px;
+}
+.files-image{
+    height: 1.3vw;
+    width: 1.3vw;
+    cursor: pointer;
+}
+
+.delete-button-container .files-name{
+    font-size:0.7vw;
+    font-weight: bold;
+    color: #353A42;
+    padding-left: 0.2vw;
+    text-align: left!important;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+    top:50%;
+    transform: translateY(-50%);
+}
+
+.files-name:hover{
+    color: #2687D7;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.react-chat-row{
+    display: block!important;
+}
+
+.react-chat-inputBox{
+    font-size: 0.8vw!important;
+    font-weight: 600;
+}
+.react-chat-textarea{
+    overflow: hidden;
+    width: calc(100% - 20px)!important;
+    margin-right: 20px!important;
+}
+
+.files-name.blocked:hover{
+    cursor: not-allowed;
+}
+
+.blue-border{
+    border-bottom: 0.5px solid #239BCF;
+}
+
+.rb-container {
+  width: 100%;
+  display: block;
+  position: relative;
+  padding-top: 5px;
+  padding-bottom: 15px;
+}
+
+.rb-container ul.rb {
+  padding: 0;
+  display: inline-block;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 0!important;
+  padding: 0!important;
+}
+
+.rb-container ul.rb li {
+  list-style: none;
+  border-left: 1px dashed #7C7C7C;
+  padding: 0 0 20px 1vw;
+  position: relative;
+}
+
+.rb-container ul.rb li::before {
+  position: absolute;
+  left: -0.3vw;
+  content: " ";
+  background: #7C7C7C;
+  height: 0.5vw;
+  width: 0.5vw;
+  border-radius: 50%;
+}
+
+.rb-container ul.rb li:first-child:before {
+    position: absolute;
+    left: -0.5vw;
+    content: " ";
+    border: 0.37vw solid #C4C4C4;
+    background: #7C7C7C;
+    height: 1vw;
+    width: 1vw;
+    border-radius: 0;
+  }
+
+  .history-img {
+    position: relative;
+    left: -0.5vw;
+    top:-15px;
+    display: inline-block;
+    height: 1.2vw;
+    width: 1.2vw;
+    cursor: pointer;
+  }
+  .history-img.rotate{
+      transform: rotate(180deg);
+      cursor: pointer;
+  }
+  
+.history-table{
+    top:-3px;
+    width: 100%;
+    height: auto;
+    font-size: 0.7vw;
+    position: relative;
+    color:  #353A42;
+}
+
+.history-table tr td{
+    width: 50%;
+}
+
+.blue-font-color{
+    color: #2687D7;
+}
+
+.filter-clear-button.file-delete{
+     transform: translate(0,0)!important;
+     position: relative!important;
+     width: 1vw!important;
+}
+
+.file-loader{
+     transform: translate(0,0)!important;
+     position: relative!important;
+     width: 1vw!important;
+}
+
+.nothing-to-show{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.nothing-box{
+    top:50%;
+    left:50%;
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    font-size: 1vw;
+    font-weight: bolder;
+    color: #2687D7;
+}
+.uploaded-file-heading{
+    font-size: 0.83vw;
+    font-weight: bold;
+    color: #2687D7;
+}

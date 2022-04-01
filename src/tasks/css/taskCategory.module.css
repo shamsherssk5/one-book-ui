@@ -1,0 +1,92 @@
+.Category{
+    height: 100%;
+    width:1%;
+    flex-grow: 100;
+    transition: width 0.1s;
+    min-width: 201px;
+}
+
+.categoryHeading{
+    height: 2.08vw;
+    width: 100%;
+    display: flex;
+}
+.collapseCategory{
+    height: 100%;
+    width:3.5%;
+    transition: width 0.1s;
+    position: relative;
+    min-width: 35px;
+}
+.CollapsecategoryHeading{
+    position: relative;
+    height: 2.08vw;
+    width: 100%;
+}
+.headerTitle{
+   margin-left: 2.9%;
+   white-space: pre;
+   font-weight: bold;
+   font-style: normal;
+   font-size: 0.83vw;
+   position: absolute;
+   top:50%;
+   transform: translate(0%,-50%);
+}
+
+.collapseHeaderTitle{
+    margin-left: 2.9%;
+    white-space: pre;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 0.83vw;
+    bottom: 1.7%!important;
+    left:100%!important;
+    position: absolute!important;
+    transform: translate(0%,45%)!important;
+}
+
+.arrowbutton,.downArrowbutton{
+    width: 44%;
+    top:50%;
+    left:50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    cursor: pointer;
+
+}
+
+.headingButton {
+    width: 2.08vw;
+    position: relative;
+}
+.headerTitleContainer{
+    position: relative;
+}
+
+.taskscategorywiseContainer{
+    top:1.65%;
+    position: relative;
+    left:4.1%;
+    width:91.8%;
+    height: 98.35%;
+}
+.taskscategoryBox{
+    display: inline-block;
+    width: 100%;
+    height: calc(100% - 2.08vw);
+    position: relative;
+    overflow-y: auto!important;
+}
+
+
+.collapseDetails{
+    text-align: left;
+    transform: rotate(90deg);
+    white-space: nowrap;
+}
+
+.dummyElements{
+    width:100%;
+}
+
