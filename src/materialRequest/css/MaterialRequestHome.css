@@ -1,14 +1,139 @@
 .materialreq-buttons {
-	width: 70% !important;
-	height: 100%;
-	display: flex;
-	cursor: pointer;
+  width: 80% !important;
+  height: 100%;
+  display: flex;
+  cursor: pointer;
+  position: relative;
+  left: 3.35%;
 }
 
 .g_plus.materialreq {
-	left: 30% !important;
+  left: 30% !important;
 }
 
 .mrq {
-	left: 55% !important;
+  left: 55% !important;
+}
+
+.mtr-filter {
+  border-top: 0.5px solid #2687d7 !important;
+}
+.mtr-filter-view {
+  height: 14.8% !important;
+  margin-bottom: 1.2%;
+}
+.mtr-td {
+  width: 16.66% !important;
+}
+.customers-container.filtrvw {
+  height: calc(70.8% - 0.3vw) !important;
+}
+
+.material-move-options {
+  position: absolute;
+  margin-top: -2.25%;
+  left: 3.6%;
+  font-size: 0.83vw;
+  font-weight: 400;
+}
+
+.mat-move-opt {
+  color: #2687d7;
+}
+
+.mat-move-opt:hover {
+  text-decoration: underline;
+}
+
+.search-close {
+  position: absolute;
+  width: 0.95vw;
+  top: 50%;
+  right: 3.6%;
+  transform: translateY(-50%);
+}
+
+.material-req-new-button {
+  position: relative;
+  font-size: 0.83vw;
+  display: block;
+  color: #2687d7;
+  font-weight: 400;
+  font-size: 0.73vw;
+}
+
+.material-req-new-button span {
+  position: absolute;
+  right: 0.5vw;
+  bottom: 3vh;
+}
+
+.material-req-new-button span:hover {
+  text-decoration: underline;
+}
+.mtr-multiple-row-container {
+  display: flex;
+  height: 10vh;
+  width: 100%;
+}
+.mult-mat-req-container {
+  height: 85vh;
+  width: 98vw;
+  font-family: Arial !important;
+}
+
+.mtr-multiple-row-container fieldset {
+  margin-right: 1vw;
+  min-width: 10vw !important;
+  max-width: 10vw !important;
+}
+.mtr-multiple-row-container fieldset.project {
+  margin-right: 1vw;
+  min-width: 11vw !important;
+  max-width: 11vw !important;
+}
+.mtr-multiple-row-container fieldset.large {
+  min-width: 19vw !important;
+  max-width: 19vw !important;
+}
+.mtr-multiple-row-container fieldset.small {
+  min-width: 5vw !important;
+  max-width: 5vw !important;
+}
+.mtr-mult-image-con {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.bs-popover-start {
+  z-index: 100000001 !important;
+}
+.mtr-mult-row-dots {
+  top: 35% !important;
+}
+.multi-mat-table,
+.multi-mat-table tbody,
+.multi-mat-table tr,
+.multi-mat-table td {
+  width: 100%;
+}
+.multi-mat-table tr {
+  border-bottom: 0.5px solid #239bcf;
+  padding-left: 0.5vw;
+}
+.multi-mat-table tr:last-child {
+  border: none;
+}
+.multi-mat-table td {
+  padding: 1vh 0 0.5vh 0.5vw;
+}
+.mat-rows-cont {
+  width: 100%;
+  height: 60vh;
+  border: 0.5px solid #239bcf;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+.multi-mat-row-error {
+  background: rgba(215, 49, 38, 0.12);
 }

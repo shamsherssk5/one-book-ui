@@ -20,9 +20,8 @@ const PhonebookListItems = ({
   setAddToSupplier,
   setToken,
   deleteTrigger,
-  setDeleteTrigger
+  setDeleteTrigger,
 }) => {
-
   const handleOnchange = (e) => {
     let isAllChecked = currentItems.every(
       (d) => document.getElementById(d.ID).checked
@@ -35,7 +34,6 @@ const PhonebookListItems = ({
   };
 
   const changeRating = async (rating, ID) => {
-
     setData((prev) => {
       let updatedPhoneBook = prev.filter((p) => {
         if (p.ID === ID) {
@@ -46,81 +44,123 @@ const PhonebookListItems = ({
       return updatedPhoneBook;
     });
 
-    await axios.post(process.env.REACT_APP_API_ENDPOINT + '/phoneBook/update-rating', { 'rating': rating, 'ID': ID }, { headers: { "Authorization": window.sessionStorage.getItem("token") } })
+    await axios
+      .post(
+        process.env.REACT_APP_API_ENDPOINT + "/phoneBook/update-rating",
+        { rating: rating, ID: ID },
+        { headers: { Authorization: window.localStorage.getItem("token") } }
+      )
       .then((res) => {
         if (res.data.error) {
           setToken(undefined);
         }
-      }).catch((err) => {
-        console.log(err);
       })
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
-  const changeCategory = async (IDs, category) => {
-
-    await axios.post(process.env.REACT_APP_API_ENDPOINT + '/phoneBook/update-category', { 'category': category, 'IDs': IDs }, { headers: { "Authorization": window.sessionStorage.getItem("token") } })
-      .then((res) => {
-        if (res.data.error) {
-          setToken(undefined);
-        }
-        setData((prev) => {
-          let updatedPhoneBook = prev.filter((p) => {
-            if (IDs.toString().split(",").includes(p.ID.toString())) {
-              p.category = category;
-            }
-            return p;
-          });
-          return updatedPhoneBook;
+  const changeCategory = async (IDs, category, change) => {
+    if (change) {
+      setData((prev) => {
+        let updatedPhoneBook = prev.filter((p) => {
+          if (IDs.toString().split(",").includes(p.ID.toString())) {
+            p.category = category;
+          }
+          return p;
         });
-        toast.success("Contact Moved successfully");
-        document.body.click();
-      }).catch((err) => {
-        console.log(err);
-        toast.error("Contact Movement Failed");
-      })
-  };
-
-  useEffect(async ()=>{
-    if(deleteTrigger){
-        let checkedItem = currentItems.filter(item => document.getElementById(item.ID).checked);
-        if (checkedItem.length === 0) {
-            toast.error("Please Select atleast one Customer Using Checkbox");
-            setDeleteTrigger();
-        }else{
-            let IDs=checkedItem.length===1?checkedItem.map(cust=>cust.ID)[0]:checkedItem.map(cust=>cust.ID).join();
-            
-            await axios.post(process.env.REACT_APP_API_ENDPOINT + '/phoneBook/delete-contact', {'IDs':IDs}, { headers: { "Authorization": window.sessionStorage.getItem("token") } })
-            .then((res) => {
-                if (res.data.error) {
-                    setToken(undefined);
-                }
-                setData(prev => {
-                    let updatedData = prev.filter(cust => !IDs.toString().split(",").includes(cust.ID.toString()))
-                    return updatedData;
-                })
-                toast.success("Contact(s) deleted Successfully");
-                document.body.click();
-            })
-            .catch((err) => {
-                console.log(err);
-                toast.error("Contact(s) deletion failed");
-            })
-
-            setDeleteTrigger();
-        }
+        return updatedPhoneBook;
+      });
     }
 
-},[deleteTrigger])
+    await axios
+      .post(
+        process.env.REACT_APP_API_ENDPOINT + "/phoneBook/update-category",
+        { category: category, IDs: IDs },
+        { headers: { Authorization: window.localStorage.getItem("token") } }
+      )
+      .then((res) => {
+        if (res.data.error) {
+          setToken(undefined);
+        }
 
+        if (!change) {
+          setData((prev) => {
+            let updatedPhoneBook = prev.filter((p) => {
+              if (IDs.toString().split(",").includes(p.ID.toString())) {
+                p.category = category;
+              }
+              return p;
+            });
+            return updatedPhoneBook;
+          });
+          toast.success("Contact Moved successfully");
+        }
+        document.body.click();
+      })
+      .catch((err) => {
+        console.log(err);
+        toast.error("Contact Movement Failed");
+      });
+  };
+
+  useEffect(async () => {
+    if (deleteTrigger) {
+      let checkedItem = currentItems.filter(
+        (item) => document.getElementById(item.ID).checked
+      );
+      if (checkedItem.length === 0) {
+        toast.error("Please Select atleast one Customer Using Checkbox");
+        setDeleteTrigger();
+      } else {
+        let IDs =
+          checkedItem.length === 1
+            ? checkedItem.map((cust) => cust.ID)[0]
+            : checkedItem.map((cust) => cust.ID).join();
+
+        await axios
+          .post(
+            process.env.REACT_APP_API_ENDPOINT + "/phoneBook/delete-contact",
+            { IDs: IDs },
+            { headers: { Authorization: window.localStorage.getItem("token") } }
+          )
+          .then((res) => {
+            if (res.data.error) {
+              setToken(undefined);
+            }
+            setData((prev) => {
+              let updatedData = prev.filter(
+                (cust) =>
+                  !IDs.toString().split(",").includes(cust.ID.toString())
+              );
+              return updatedData;
+            });
+            toast.success("Contact(s) deleted Successfully");
+            document.body.click();
+          })
+          .catch((err) => {
+            console.log(err);
+            toast.error("Contact(s) deletion failed");
+          });
+
+        setDeleteTrigger();
+      }
+    }
+  }, [deleteTrigger]);
 
   useEffect(() => {
     if (moveToPreferred) {
-      let checkedItem = currentItems.filter(item => document.getElementById(item.ID).checked);
+      let checkedItem = currentItems.filter(
+        (item) => document.getElementById(item.ID).checked
+      );
       if (checkedItem.length === 0) {
         toast.error("Please Select atleast one Item Using Checkbox");
         setMoveToPreferred();
       } else {
-        let IDs = checkedItem.length === 1 ? checkedItem.map(cust => cust.ID)[0] : checkedItem.map(cust => cust.ID).join();
+        let IDs =
+          checkedItem.length === 1
+            ? checkedItem.map((cust) => cust.ID)[0]
+            : checkedItem.map((cust) => cust.ID).join();
         changeCategory(IDs, moveToPreferred);
         setMoveToPreferred();
       }
@@ -128,31 +168,40 @@ const PhonebookListItems = ({
   }, [moveToPreferred]);
 
   useEffect(async () => {
-    if(addToSupplier){
-
-      let checkedItem = currentItems.filter(item => document.getElementById(item.ID).checked);
+    if (addToSupplier) {
+      let checkedItem = currentItems.filter(
+        (item) => document.getElementById(item.ID).checked
+      );
       if (checkedItem.length === 0) {
         toast.error("Please Select atleast one Item Using Checkbox");
         setAddToSupplier();
       } else {
-        let IDs = checkedItem.length === 1 ? checkedItem.map(cust => cust.ID)[0] : checkedItem.map(cust => cust.ID).join();
-        
-        await axios.post(process.env.REACT_APP_API_ENDPOINT + '/phoneBook/copy-contact-supplier', {'IDs':IDs}, { headers: { "Authorization": window.sessionStorage.getItem("token") } })
-            .then((res) => {
-                if (res.data.error) {
-                    setToken(undefined);
-                }
-                toast.success("Contact(s) added Successfully to Suppliers");
-                document.body.click();
-                setToInitial();
-            })
-            .catch((err) => {
-                console.log(err);
-                toast.error("Contact(s) addition failed");
-            })
+        let IDs =
+          checkedItem.length === 1
+            ? checkedItem.map((cust) => cust.ID)[0]
+            : checkedItem.map((cust) => cust.ID).join();
+
+        await axios
+          .post(
+            process.env.REACT_APP_API_ENDPOINT +
+              "/phoneBook/copy-contact-supplier",
+            { IDs: IDs },
+            { headers: { Authorization: window.localStorage.getItem("token") } }
+          )
+          .then((res) => {
+            if (res.data.error) {
+              setToken(undefined);
+            }
+            toast.success("Contact(s) added Successfully to Suppliers");
+            document.body.click();
+            setToInitial();
+          })
+          .catch((err) => {
+            console.log(err);
+            toast.error("Contact(s) addition failed");
+          });
         setAddToSupplier();
       }
-
     }
   }, [addToSupplier]);
 
@@ -200,14 +249,14 @@ const PhonebookListItems = ({
   useEffect(() => {
     if (currentItems == null) return;
     setToInitial();
-  }, [currentItems])
+  }, [currentItems]);
 
-  const setToInitial=()=>{
+  const setToInitial = () => {
     document.getElementById("all").checked = false;
-    currentItems.forEach(element => {
+    currentItems.forEach((element) => {
       document.getElementById(element.ID).checked = false;
     });
-  }
+  };
 
   return (
     <div className="list-container-box">
@@ -286,10 +335,13 @@ const PhonebookListItems = ({
                       className="task-list-row-container"
                       onClick={(e) => {
                         let className = e.target.className;
-                        if (className === 'chk-box-container-td' || className === 'chkbx') return;
+                        if (
+                          className === "chk-box-container-td" ||
+                          className === "chkbx"
+                        )
+                          return;
                         setSelectData(cust);
                         setRightContent("Details");
-
                       }}
                       style={{
                         backgroundColor:
@@ -297,7 +349,8 @@ const PhonebookListItems = ({
                       }}
                     >
                       <td width="3.6%" className="chk-box-container-td">
-                        <input className="chkbx"
+                        <input
+                          className="chkbx"
                           name={cust.ID}
                           id={cust.ID}
                           type="checkbox"
@@ -305,13 +358,20 @@ const PhonebookListItems = ({
                         />
                       </td>
                       <td width="25.57%" className="ref-subject-container">
-                        <p>{cust.refText} {cust.refNum}</p>
-                        <div className="comp-name-alias">
-                          {cust.companyName}
-                        </div>
+                        <p>
+                          {cust.refText} {cust.refNum}
+                        </p>
+                        <p className="list-subject">{cust.companyName}</p>
                       </td>
                       <td width="17.70%">{cust.contactPerson}</td>
-                      <td width="15.63%" className="ref-subject-container" >{cust.contactNumber.split(",").map(m => <p>+{m}</p>)}</td>
+                      <td width="15.63%" className="ref-subject-container">
+                        {cust.contactNumber
+                          .split(",")
+                          .filter((x) => x !== "")
+                          .map((m) => (
+                            <p>+{m}</p>
+                          ))}
+                      </td>
                       <td width="21.91%">{cust.keyWords}</td>
                       <td width="10.80%">
                         <StarRatings
@@ -340,7 +400,15 @@ const PhonebookListItems = ({
                               ? "Make Not Preferred"
                               : "Make Preferred"
                           }
-                          onClick={() => changeCategory(cust.ID, cust.category == "preferred" ? "Non preferred" : cust.category)}
+                          onClick={() =>
+                            changeCategory(
+                              cust.ID,
+                              cust.category === "preferred"
+                                ? "Non preferred"
+                                : "preferred",
+                              true
+                            )
+                          }
                         />
                       </td>
                     </tr>

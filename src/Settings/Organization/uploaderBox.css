@@ -1,73 +1,78 @@
 .upload-box-modal {
-  background-color: #EBF6FF;
-  border: 0.2px solid #7C7C7C;
+  background-color: #ebf6ff;
+  border: 0.2px solid #7c7c7c;
   border-radius: 5px;
   width: 31.5vw;
   font-family: Arial;
 }
-.upload-box-modal  .upload-box-header {
+.upload-box-modal .upload-box-header {
   width: 100%;
-  border-bottom: 2px solid #FF820E;
+  border-bottom: 2px solid #ff820e;
   font-size: 1vw;
   text-align: left;
   padding: 1.4vh 2.25vw;
-  color: #353A42 ;
+  color: #353a42;
   font-weight: bold;
 }
-.upload-box-modal  .upload-box-content {
+.upload-box-modal .upload-box-content {
   width: 100%;
   padding: 2.3vh 2.25vw 2.3vh 2.25vw;
-  border-bottom: 2px solid #FFFFFF;
+  border-bottom: 2px solid #ffffff;
 }
 .upload-box-modal .upload-box-actions {
   width: 100%;
   padding: 1.45vh 2.25vw 2.3vh 2.25vw;
   display: flex;
 }
-.upload-close-button{
-  border-radius: 2px!important;
-  padding: 0.4vh 0.6vw!important;
+.upload-close-button {
+  border-radius: 2px !important;
+  padding: 0.4vh 0.6vw !important;
 }
 
-.upload-close-button:hover{
+.upload-close-button:hover {
   opacity: 0.8;
-
 }
 
-.upload-box-text{
+.upload-box-text {
   font-style: normal;
   font-weight: normal;
   font-size: 0.78vw;
-  color: #7C7C7C;
-  
+  color: #7c7c7c;
 }
-.upload-box-text .imp-text-upload-box{
-  color: #2687D7!important;
+.upload-box-text .imp-text-upload-box {
+  color: #2687d7 !important;
   font-size: 0.77vw;
-
 }
 
-.browse-button{
-  padding: 0.5vh 0.5vw!important;
+.imp-text-upload-box.download {
+  text-align: center;
+  cursor: pointer;
+}
+.imp-text-upload-box.download:hover {
+  text-decoration: underline;
+}
+
+.browse-button {
+  padding: 0.5vh 0.5vw !important;
   font-size: 0.75vw;
-  background: #353A42!important;
+  background: #353a42 !important;
   margin-left: 0.5vw;
 }
 
-.browse-button-container label{
-  border: none!important;
-  min-width: 0!important;
+.browse-button-container label {
+  border: none !important;
+  min-width: 0 !important;
 }
 
-.files-name-upload-box{
+.files-name-upload-box {
   text-align: center;
   padding-bottom: 1vh;
-  color: #FF820E;
+  color: #ff820e;
   cursor: pointer;
 }
 
-.upload-file-box-delete{
-  transform: translate(0%, 0%)!important;
+.upload-file-box-delete {
+  transform: translate(0%, 0%) !important;
   width: 0.9vw;
   margin-left: 0.7vw;
 }

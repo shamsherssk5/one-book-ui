@@ -361,10 +361,14 @@
     font-size: 0.7vw;
     position: relative;
     color:  #353A42;
+    table-layout: fixed;
+}
+.history-table tr{
+    width: 100%;
 }
 
 .history-table tr td{
-    width: 50%;
+    overflow: hidden;
 }
 
 .blue-font-color{
@@ -404,4 +408,8 @@
     font-size: 0.83vw;
     font-weight: bold;
     color: #2687D7;
+}
+
+.task-details-box table tr td{
+    word-break: break-all;
 }

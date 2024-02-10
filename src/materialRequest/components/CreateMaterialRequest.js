@@ -1,275 +1,451 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "../css/MaterialRequestHome.css";
-import Dep_plus from "../../tasks/assets/dep-plus.png";
-import { FileUploader } from "react-drag-drop-files";
-import next from "../../tasks/assets/next.png";
 import DatePicker from "react-date-picker";
+import Gap from "../../common/Gap";
+import FileUploaderListViewer from "../../common/FileUploaderListViewer";
+import toast from "react-hot-toast";
+import axios from "axios";
+import Select from "react-select";
+import CreatableSelect from "react-select/creatable";
+import _ from "lodash";
 
 const CreateMaterialRequest = ({
-	rightContent,
-	data,
-	setData,
-	depData,
-	unitData,
-	vendorProdid,
+  rightContent,
+  setData,
+  depData,
+  setToken,
+  setRightContent,
+  setSelectData,
+  unitData,
+  setUnitdata,
+  pnm,
+  setpnm,
 }) => {
-	console.log(data);
+  let currentUser = JSON.parse(window.localStorage.getItem("currentUser"));
+  const ref = useRef(null);
+  const [files, setFiles] = useState([]);
+  const handleDelete = (id) => {
+    setFiles((prev) => {
+      let f = prev.filter((file) => file.fileID !== id);
+      return f;
+    });
+  };
 
-	const intialValues = {
-		MRref: "MR-05128",
-		matID: "",
-		Department: "",
-		materialName: "",
-		quantity: 0,
-		unit: "",
-		projectCode: "PR-051",
-		projectRelated: "",
-		priority: "",
-		status: "Order Request",
-		requestedDate: "02 feb 2022",
-		notes: "",
-		createdBy: "",
-		error: undefined,
-	};
+  const [matType, setMatType] = useState("list");
 
-	const [submitvalue, setSubmitValue] = useState("Save");
-	const [isCustomDate, setIsCustomDate] = useState(false);
-	const [disable, submitDisable] = useState(false);
-	const [formMatData, setFormMatData] = useState(intialValues);
-	const [formErrors, setFormErrors] = useState({});
-	const [counter, setCounter] = useState(5);
-	const [value, onChange] = useState(new Date());
+  const handleUpload = (file) => {
+    setFiles((prev) => {
+      return [...prev, file];
+    });
+  };
 
-	const handleFormChange = (e) => {
-		if (e.target.name === "priority" && e.target.value === "Custom Date") {
-			setIsCustomDate(true);
-			setFormMatData({ ...formMatData, priority: "Custom Date" });
-			return;
-		}
-		const { name, value } = e.target;
+  const intialValues = {
+    orgID: currentUser.orgID,
+    department: "",
+    materialName: "",
+    quantity: 0,
+    unit: "",
+    projectID: "",
+    priority: "",
+    status: "Order Request",
+    requestedDate: "",
+    notes: "",
+    createdBy: currentUser.username,
+    error: undefined,
+  };
 
-		setFormMatData({ ...formMatData, [name]: value });
-	};
+  const [submitvalue, setSubmitValue] = useState("Save");
+  const [isCustomDate, setIsCustomDate] = useState(false);
+  const [formMatData, setFormMatData] = useState(intialValues);
+  const [start, onChange] = useState(new Date());
 
-	const validate = (values) => {
-		const generateId = () => {};
+  useEffect(async () => {
+    if (pnm && pnm.length > 0) return;
+    await axios
+      .get(
+        process.env.REACT_APP_API_ENDPOINT +
+          "/mtr/getpnm?orgID=" +
+          currentUser.orgID,
+        { headers: { Authorization: window.localStorage.getItem("token") } }
+      )
+      .then((res) => {
+        if (res.data.error) {
+          setToken(undefined);
+        }
+        setpnm(res.data);
+        setUnitdata(_.uniqBy(res.data || [], "unitname"));
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, [rightContent]);
 
-		if (!values.Department) {
-			setFormMatData({ ...formMatData, error: "Please fill Department field" });
-			return;
-		}
+  const handleFormChange = (e) => {
+    const { name, value } = e.target;
+    if (name === "priority" && value === "Custom Date") {
+      setIsCustomDate(true);
+      setFormMatData({ ...formMatData, priority: "Custom Date" });
+      return;
+    } else if (name == "materialName") {
+      setFormMatData({
+        ...formMatData,
+        [name]: value,
+        error: undefined,
+        unit: (pnm || []).find((p) => p.itemName === value)?.unitname,
+      });
+      return;
+    }
 
-		if (!values.materialName) {
-			setFormMatData({
-				...formMatData,
-				error: "Please fill material Name field",
-			});
-			return;
-		}
+    setFormMatData({ ...formMatData, [name]: value, error: undefined });
+  };
 
-		if (!values.quantity) {
-			setFormMatData({ ...formMatData, error: "Please fill quantity field" });
-			return;
-		}
+  const validate = (values) => {
+    if (!values.department) {
+      setFormMatData({ ...formMatData, error: "Please Select Department" });
+      ref.current.scrollTop = 0;
+      return;
+    }
 
-		if (!values.unit) {
-			setFormMatData({ ...formMatData, error: "Please fill unit field" });
-			return;
-		}
+    if (!values.materialName) {
+      setFormMatData({
+        ...formMatData,
+        error: "Please Enter material Name",
+      });
+      ref.current.scrollTop = 0;
+      return;
+    }
 
-		if (values.quantity && isNaN(values.quantity)) {
-			setFormMatData({
-				...formMatData,
-				error: "Please fill numeric data in quantity field",
-			});
-			return;
-		}
+    if (!values.quantity) {
+      setFormMatData({ ...formMatData, error: "Please Enter Quantity" });
+      ref.current.scrollTop = 0;
+      return;
+    }
 
-		setFormMatData({ ...formMatData, error: undefined });
+    if (!values.unit) {
+      setFormMatData({ ...formMatData, error: "Please Select Unit" });
+      ref.current.scrollTop = 0;
+      return;
+    }
 
-		console.log("form validation ends");
-	};
+    if (!values.priority) {
+      setFormMatData({ ...formMatData, error: "Please Select Priority" });
+      ref.current.scrollTop = 0;
+      return;
+    }
 
-	const handleFormSubmit = (e) => {
-		e.preventDefault();
+    if (values.quantity && values.quantity <= 0) {
+      setFormMatData({
+        ...formMatData,
+        error: "Quantity must be greater than zero",
+      });
+      ref.current.scrollTop = 0;
+      return;
+    }
 
-		validate(formMatData);
+    if (values.quantity && isNaN(values.quantity)) {
+      setFormMatData({
+        ...formMatData,
+        error: "Quantity must be Number",
+      });
+      ref.current.scrollTop = 0;
+      return;
+    }
 
-		setSubmitValue("...Saving");
-	};
+    setFormMatData({ ...formMatData, error: undefined });
+  };
 
-	useEffect(() => {
-		console.log(submitvalue);
-		console.log(formMatData.error);
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
 
-		if (submitvalue === "...Saving" && !formMatData.error) {
-			setData((prevState) => [...prevState, formMatData]);
-			setFormMatData(intialValues);
-			setSubmitValue("Save");
-		} else {
-			setSubmitValue("Save");
-			console.log("else loop");
-		}
-	}, [submitvalue]);
+    validate(formMatData);
 
-	return (
-		rightContent === "Create" && (
-			<div className="task-details-box">
-				<div className="create-task-container task-details-container">
-					<form name="materialForm" autoComplete="off">
-						<div className="task-form-container">
-							{formMatData.error && (
-								<div>
-									<span class="warning-text-error warning-text">
-										{formMatData.error}
-									</span>
-								</div>
-							)}
-							<fieldset>
-								<legend>Department / Section</legend>
-								<select
-									className="title"
-									name="Department"
-									value={formMatData.Department}
-									onChange={handleFormChange}
-									required
-								>
-									<option value="" disabled selected>
-										Select Department
-									</option>
-									{depData.departments.map((dep, index) => (
-										<option value={dep.name}> {dep.name} </option>
-									))}
-								</select>
-							</fieldset>
-							<fieldset>
-								<legend>Material Name</legend>
-								<input
-									type="text"
-									name="materialName"
-									value={formMatData.materialName}
-									onChange={handleFormChange}
-									placeholder="Enter / Select Requested Material"
-								/>
-							</fieldset>
-							<fieldset>
-								<legend>Project Related</legend>
-								<input
-									type="text"
-									name="projectRelated"
-									value={formMatData.projectRelated}
-									onChange={handleFormChange}
-									placeholder="Enter / Select Project (Optional)"
-								/>
-							</fieldset>
+    setSubmitValue("...Saving");
+  };
 
-							<div style={{ width: "100%", display: "flex" }}>
-								<div style={{ width: "48%" }}>
-									<fieldset>
-										<legend>Qty</legend>
-										<input
-											type="number"
-											step={0.01}
-											name="quantity"
-											value={formMatData.quantity}
-											onChange={handleFormChange}
-											placeholder="Enter Qty"
-										/>
-									</fieldset>
-								</div>
-								<div style={{ width: "48%", left: "4%", position: "relative" }}>
-									<fieldset>
-										<legend>Unit</legend>
-										<select
-											className="title"
-											name="unit"
-											value={formMatData.unit}
-											onChange={handleFormChange}
-											required
-										>
-											<option value="" disabled selected>
-												Select Unit
-											</option>
-											<option value="Sheet">Sheet</option>
-											<option value="inch">inch</option>
-											<option value="Sqft">Sqft</option>
-											<option value="Sqcm">Sqcm</option>
-										</select>
-									</fieldset>
-								</div>
-							</div>
+  useEffect(async () => {
+    formMatData["priority_date"] = start
+      ? start.getFullYear().toString() +
+        "-" +
+        (start.getMonth() + 1).toString() +
+        "-" +
+        start.getDate().toString()
+      : "";
 
-							{!isCustomDate && (
-								<fieldset>
-									<legend>Priority</legend>
-									<select
-										className="title"
-										name="priority"
-										value={formMatData.priority}
-										onChange={handleFormChange}
-										required
-									>
-										<option value="" disabled selected>
-											HIGH/MEDIUM/LOW & Pick a Date
-										</option>
-										<option value="HIGH">HIGH</option>
-										<option value="MEDIUM">MEDIUM</option>
-										<option value="LOW">LOW</option>
-										<option value="Custom Date">CUSTOM DATE</option>
-									</select>
-								</fieldset>
-							)}
-							{isCustomDate && (
-								<fieldset>
-									<legend>Custom Date</legend>
-									<DatePicker
-										onChange={onChange}
-										value={value}
-										required={true}
-										calendarIcon={null}
-										clearIcon={null}
-										openCalendarOnFocus={true}
-										autoFocus={true}
-									/>
-									<span
-										title="close calendar"
-										className="calendar-closee"
-										onClick={() => {
-											setIsCustomDate(false);
-											setFormMatData({ ...formMatData, priority: "" });
-										}}
-									>
-										&#10006;
-									</span>
-								</fieldset>
-							)}
+    if (submitvalue === "...Saving" && !formMatData.error) {
+      formMatData["attachments"] = files;
+      await axios
+        .post(
+          process.env.REACT_APP_API_ENDPOINT +
+            "/mtr/create-mtr?timeZone=" +
+            currentUser.timeZone,
+          formMatData,
+          { headers: { Authorization: window.localStorage.getItem("token") } }
+        )
+        .then((res) => {
+          if (res.data.error) {
+            setToken(undefined);
+          }
+          formMatData["matID"] = res.data.insertId;
+          formMatData["refText"] = "MR-";
+          formMatData["refNum"] = "####";
+          formMatData["history"] = [];
+          formMatData["conversations"] = [];
+          formMatData["requestedDate"] = new Date(
+            new Date().toLocaleString("en-US", {
+              timeZone: currentUser.timeZone,
+            })
+          ).toLocaleString();
+          formMatData.history.unshift({
+            moduleID: formMatData.matID,
+            action: "Added",
+            dateAndTime: new Date(
+              new Date().toLocaleString("en-US", {
+                timeZone: currentUser.timeZone,
+              })
+            ).toLocaleString(),
+            name: formMatData.createdBy,
+          });
+          setData((prevState) => [formMatData, ...prevState]);
+          setSelectData(formMatData);
+          setFiles([]);
+          setRightContent("Details");
+          setFormMatData(intialValues);
+          setSubmitValue("Save");
+          setMatType("list");
+          toast.success("Material Request created Successfully!");
+        })
+        .catch((err) => {
+          console.log(err);
+          toast.error("Matrial Request creation failed");
+          setSubmitValue("Save");
+        });
+    } else {
+      setSubmitValue("Save");
+    }
+  }, [submitvalue]);
 
-							<fieldset>
-								<legend>Notes</legend>
-								<textarea
-									id="notes"
-									name="notes"
-									value={formMatData.notes}
-									onChange={handleFormChange}
-									placeholder="Enter Notes if any (Optional) - 150 Characters MAX"
-									maxLength="150"
-								/>
-							</fieldset>
+  return (
+    rightContent === "Create" && (
+      <div className="task-details-box" ref={ref}>
+        <div className="create-task-container task-details-container">
+          <form name="materialForm" autoComplete="off">
+            <div className="task-form-container">
+              {formMatData.error && (
+                <div>
+                  <span class="warning-text-error warning-text">
+                    {formMatData.error}
+                  </span>
+                </div>
+              )}
+              <fieldset>
+                <legend>Department / Section</legend>
+                <Select
+                  isLoading={depData.departments.length === 0}
+                  isSearchable={true}
+                  placeholder={"Select Department"}
+                  name="department"
+                  key={`my_unique_select_key__${formMatData.department}`}
+                  value={
+                    formMatData.department
+                      ? {
+                          label: formMatData.department,
+                          value: formMatData.department,
+                        }
+                      : undefined
+                  }
+                  onChange={(selected) =>
+                    handleFormChange({
+                      target: { name: "department", value: selected.value },
+                    })
+                  }
+                  options={depData.departments.map((p) => {
+                    return {
+                      value: p.name,
+                      label: p.name,
+                    };
+                  })}
+                />
+              </fieldset>
+              <fieldset>
+                <legend>Material Name</legend>
+                <CreatableSelect
+                  isLoading={pnm.length === 0}
+                  isSearchable={true}
+                  placeholder={"Select Material Name"}
+                  name="materialName"
+                  key={`my_unique_select_key__${formMatData.materialName}`}
+                  value={
+                    formMatData.materialName
+                      ? {
+                          label: formMatData.materialName,
+                          value: formMatData.materialName,
+                        }
+                      : undefined
+                  }
+                  onChange={(selected) =>
+                    handleFormChange({
+                      target: { name: "materialName", value: selected.value },
+                    })
+                  }
+                  options={pnm.map((p) => {
+                    return {
+                      value: p.itemName,
+                      label: p.itemName,
+                    };
+                  })}
+                />
+              </fieldset>
+              <fieldset>
+                <legend>Project Related</legend>
+                <input
+                  type="text"
+                  name="projectRelated"
+                  value={formMatData.projectRelated}
+                  onChange={handleFormChange}
+                  placeholder="Enter / Select Project (Optional)"
+                />
+              </fieldset>
 
-							<div className="submit-button-container">
-								<input
-									className="submit-button"
-									type="button"
-									value={submitvalue}
-									onClick={handleFormSubmit}
-								/>
-							</div>
-						</div>
-					</form>
-				</div>
-			</div>
-		)
-	);
+              <div style={{ width: "100%", display: "flex" }}>
+                <div style={{ width: "48%" }}>
+                  <fieldset style={{ height: "78.7%" }}>
+                    <legend>Qty</legend>
+                    <input
+                      type="number"
+                      step={1}
+                      name="quantity"
+                      value={formMatData.quantity}
+                      onChange={handleFormChange}
+                      placeholder="Enter Qty"
+                    />
+                  </fieldset>
+                </div>
+                <div style={{ width: "48%", left: "4%", position: "relative" }}>
+                  <fieldset>
+                    <legend>Unit</legend>
+                    <Select
+                      isLoading={unitData.length === 0}
+                      isSearchable={true}
+                      placeholder={"Select Unit"}
+                      name="unit"
+                      key={`my_unique_select_key__${formMatData.unit}`}
+                      value={
+                        formMatData.unit
+                          ? {
+                              label: formMatData.unit,
+                              value: formMatData.unit,
+                            }
+                          : undefined
+                      }
+                      onChange={(selected) =>
+                        handleFormChange({
+                          target: { name: "unit", value: selected.value },
+                        })
+                      }
+                      options={unitData.map((p) => {
+                        return {
+                          value: p.unitname,
+                          label: p.unitname,
+                        };
+                      })}
+                    />
+                  </fieldset>
+                </div>
+              </div>
+
+              {!isCustomDate && (
+                <fieldset>
+                  <legend>Priority</legend>
+                  <Select
+                    isSearchable={true}
+                    placeholder={"Select Priority"}
+                    name="priority"
+                    key={`my_unique_select_key__${formMatData.priority}`}
+                    value={
+                      formMatData.priority
+                        ? {
+                            label: formMatData.priority,
+                            value: formMatData.priority,
+                          }
+                        : undefined
+                    }
+                    onChange={(selected) =>
+                      handleFormChange({
+                        target: { name: "priority", value: selected.value },
+                      })
+                    }
+                    options={["HIGH", "MEDIUM", "LOW", "Custom Date"].map(
+                      (p) => {
+                        return {
+                          value: p,
+                          label: p,
+                        };
+                      }
+                    )}
+                  />
+                </fieldset>
+              )}
+              {isCustomDate && (
+                <fieldset>
+                  <legend>Custom Date</legend>
+                  <DatePicker
+                    onChange={onChange}
+                    value={start}
+                    required={true}
+                    calendarIcon={null}
+                    clearIcon={null}
+                    openCalendarOnFocus={true}
+                    autoFocus={true}
+                  />
+                  <span
+                    title="close calendar"
+                    className="calendar-closee"
+                    onClick={() => {
+                      setIsCustomDate(false);
+                      setFormMatData({ ...formMatData, priority: "" });
+                    }}
+                  >
+                    &#10006;
+                  </span>
+                </fieldset>
+              )}
+
+              <fieldset>
+                <legend>Notes</legend>
+                <textarea
+                  id="notes"
+                  name="notes"
+                  value={formMatData.notes}
+                  onChange={handleFormChange}
+                  placeholder="Enter Notes if any (Optional) - 150 Characters MAX"
+                  maxLength="150"
+                />
+              </fieldset>
+
+              <div className="submit-button-container">
+                <input
+                  className="submit-button"
+                  type="button"
+                  value={submitvalue}
+                  onClick={handleFormSubmit}
+                />
+              </div>
+            </div>
+          </form>
+        </div>
+        <Gap />
+        <FileUploaderListViewer
+          isView={false}
+          setToken={setToken}
+          data={files}
+          handleUpload={handleUpload}
+          handleDelete={handleDelete}
+          module="mtr"
+          id={undefined}
+        />
+      </div>
+    )
+  );
 };
 
 export default CreateMaterialRequest;

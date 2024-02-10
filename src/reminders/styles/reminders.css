@@ -1,0 +1,86 @@
+.g_plus.reminder{
+    left: 24%!important;
+}
+
+.reminderTypeFiller{
+    width: 21.4%;
+    position: relative;
+}
+.remBoxDataCon{
+    width: 75.71%;
+}
+
+.remDetBox{
+    padding-top: 13px;
+    padding-bottom: 7px;
+    padding-left: 0.8vw;
+}
+
+.datetime{
+    text-align: left;
+    font-size: 0.7vw;
+    color: #595047;
+    display: flex;
+}
+.reminText{
+    font-weight: 400!important;
+    position: relative;
+}
+.reminImage img{
+    width:0.78vw!important;
+}
+.reminNote{
+    position: absolute;
+    top:50%;
+    transform: translateY(-40%);
+    left:13%;
+}
+.remtypeimg{
+    width: 1.35vw;
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%);
+    top:30px;
+}
+.days-warning{
+    position: absolute;
+    top: 55%;
+    text-align: center;
+    font-size: 1vw;
+    width: 100%;
+}
+.days-warning p{
+    padding: 0;
+    margin: 0;
+    border: none;
+    font-family: 'Arial';
+    font-style: normal;
+    color: #FFFFFF!important;
+    font-weight: 700;
+    font-size: 0.6vw;
+}
+.days-warning p.numdays{
+    font-size: 1.1vw;
+}
+.rem-date-time{
+    color: #C4C4C4!important;
+}
+.rem-chk-box{
+    border:0.5px solid #C4C4C4!important;
+}
+.rem-chk-box:checked{
+    border:0.5px solid #44B764!important;
+}
+.rem-label{
+    font-size: 0.76vw;
+    font-weight: normal;
+    color: #353A42;
+}
+.time-req-span{
+    position: absolute;
+    bottom: 3vh;
+    right: 0;
+}
+.search-close.rem{
+    top: 81%!important;
+}

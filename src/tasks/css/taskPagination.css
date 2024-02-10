@@ -100,7 +100,13 @@
 }
 
 .task-list-row-container td{
-    padding: 1.6vh 0 0.6vh 0;
+    padding: 1.6vh 0.3vw 0.6vh 0;
+    position: relative;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow:hidden;
+}
+.task-list-row-container td p,.task-list-row-container td span{
     position: relative;
     white-space: nowrap;
     text-overflow: ellipsis;

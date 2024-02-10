@@ -1,0 +1,146 @@
+.g_plus.inventory{
+    left: 25%!important;
+}
+
+.inventory-button{
+    width:67%!important;
+}
+
+.stock_low_img{
+    width: 1.75vw;
+    margin-left: 0.75vw;
+}
+.stock_in_img{
+    width: 2.4vw;
+}
+.discussion_image{
+    width: 1.04vw;
+    margin-left: 0.5vw;
+}
+
+.inventory-discussion .overlay{
+    padding: 0!important;
+    font-size: 0.8vw!important;
+    font-family: Arial!important;
+}
+
+.inventory-discussion .emoji-input .emoji-icon{
+    top:50%!important;
+    width:1.5vw!important;
+    transform: translateY(-40%);
+    position: relative;
+}
+
+.inventory-discussion .form .userImg{
+    margin: 0;
+}
+
+.inventory-discussion .szh-menu-container .szh-menu__item{
+    padding: 0;
+    font-size: 0.8vw;
+    color: #353A42;
+    font-family: Arial;
+}
+
+.inventory-discussion  .fullName, .inventory-discussion  .infoStyle, .inventory-discussion  .replyBtn{
+    font-size: 0.8vw!important;
+    color: #353A42!important;
+    font-family: Arial!important;;
+}
+
+.inventory-discussion  .optionIcon{
+    width:0.1vw!important;
+    height: 0.1vw!important;
+}
+
+.inventory-discussion  .emoji-picker-react{
+    width: 19vw!important;
+}
+
+.react-responsive-modal-closeButton{
+    right:0.1vw!important;
+    top:0.1vw!important;
+}
+
+.inv-box-container{
+    left: 10.78%!important;
+    height: 21.8%;
+}
+.inventory-container{
+    height: calc(67% - 0.7vw)!important;
+}
+
+.inventory-container.filtrvw{
+    height: calc(49.5% - 0.3vw)!important;
+}
+.inv-box-container .vendor-item-desc{
+    color: #187ACB!important;
+}
+
+.inv-box-container .mat-box{
+    padding: 0!important;
+    border:none;
+}
+
+.inv-box-container .mat-table{
+    font-weight: 600;
+}
+.inv-box-container .mat-table-firstcol, .inv-box-container .mat-table-2-1{
+    width:35%!important;
+}
+
+.total_in_img ,.total_out_img{
+    width: 2vw;
+}
+
+.inv-out{
+    color: #F94444!important;
+}
+.inv-in{
+    color: #44B764!important;
+}
+
+.available_stock{
+    background-color: #44B764;
+    position: relative;
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;
+}
+.available_stock .table-heading{
+    color: #fff!important;
+}
+
+.total-available-container{
+    left: 6.48%;
+    width: 88.7%;
+    position: relative;
+}
+.warehouse-heading{
+    padding-bottom: 3.5vh;
+}
+
+.inventory-stores-holder{
+    border-top: 0.5px solid #c4c4c4!important;
+    border-bottom: 0.5px solid #c4c4c4!important;
+}
+
+.movement-box-modal .movement-container{
+    width:auto!important;
+    left:0!important;
+}
+
+.movement-box-modal .movement-container input, .movement-box-modal .movement-container #notes{
+    background-color: #EBF6FF;
+}
+
+.movement-box-modal .movement-container img{
+    cursor: pointer;
+}
+
+.expirydate-holder{
+    left:0%!important;
+}
+
+.expirydate-holder .react-date-picker__inputGroup input{
+    background: #F9F9F9!important;
+}

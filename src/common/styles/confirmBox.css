@@ -1,0 +1,64 @@
+.confirm-box {
+  top: 50% !important;
+  left: 50% !important;
+  z-index: 100000001 !important;
+}
+.confirm-box-container {
+  width: 18.1vw;
+  height: auto;
+  background-color: white;
+  position: relative;
+  font-family: "Arial";
+  padding-bottom: 2.35vh;
+  transform: translate(-50%, -50%);
+}
+
+.warning-box-image {
+  padding-top: 8.71vh;
+  width: 5.6vw;
+}
+
+.warning-box-text {
+  padding-top: 3.17vh;
+  display: block;
+  font-size: 1.3vw;
+  font-weight: 400;
+  color: #ff820e;
+}
+
+.warning-box-message {
+  padding-left: 1vw;
+  padding-right: 1vw;
+  padding-top: 2.17vh;
+  display: block;
+  font-size: 0.78vw;
+  font-weight: 400;
+  color: #353a42;
+}
+
+.warning-box-button-container {
+  padding: 6vh 2.34vw 3.9vh 2.34vw;
+  width: 100%;
+  position: relative;
+  display: flex;
+  border-bottom: 0.44vh solid #ffc086;
+}
+
+.warning-box-button-container button {
+  border-radius: 2px;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+  width: 4.8vw;
+  text-align: center;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.89vw;
+  padding-top: 0.21vw;
+  padding-bottom: 0.23vw;
+}
+
+.warning-box-button-container button:hover {
+  opacity: 0.7;
+}

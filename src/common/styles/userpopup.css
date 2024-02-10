@@ -1,102 +1,101 @@
-.user-pop-up{
-    height: 49vh;
-    min-height: 30vh;
-    width: 18.1vw;
-    position: relative;
-    background: #FFFEFE;
-    border-top: none;
-    border-radius: 5px;
-    font-family: Arial;
+.user-pop-up {
+  height: 49vh;
+  min-height: 30vh;
+  width: 18.1vw;
+  position: relative;
+  background: #fffefe;
+  border-top: none;
+  border-radius: 5px;
+  font-family: Arial;
 }
 
-.profile-pic-container{
-    height: 36%;
-    width: 100%;
-    position: relative;
-    cursor: pointer;
+.profile-pic-container {
+  height: 36%;
+  width: 100%;
+  position: relative;
+  cursor: pointer;
 }
 
-.user-name-container{
-    height: 10%;
-    width: 100%;
-    text-align: center;
-    position: relative;
+.user-name-container {
+  width: 100%;
+  text-align: center;
+  position: relative;
 }
 
-.user-name-container span{
-    bottom: 0;
-    position: absolute;
-    transform: translateX(-50%);
-    font-style: normal;
-    font-weight: normal;
-    color: #353A42;
-    font-size: 1vw;
+.user-name-container span {
+  bottom: 0;
+  position: relative;
+  transform: translateX(-50%);
+  font-style: normal;
+  font-weight: normal;
+  color: #353a42;
+  font-size: 1vw;
 }
 
-.profile-pic-box{
-    left:50%;
-    bottom: 0%;
-    position: absolute;
-    transform: translateX(-50%);
+.profile-pic-box {
+  left: 50%;
+  bottom: 0%;
+  position: absolute;
+  transform: translateX(-50%);
 }
 
-.user-email-container{
-    text-align: center;
-    color: #7C7C7C;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 0.78vw;
-    height: 10%;
-    position: relative;
+.user-email-container {
+  text-align: center;
+  color: #7c7c7c;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.78vw;
+  height: 10%;
+  position: relative;
 }
 
-.log-out-button-container{
-    height: 14%;
-    width: 100%;
-    position: relative;
-    text-align: center;
-    
+.log-out-button-container {
+  height: 14%;
+  width: 100%;
+  position: relative;
+  text-align: center;
 }
 
-.log-out-button{
-    margin-top: 2%;
-    font-size: 0.89vw!important;
-    padding:0.7vh 0.7vw!important;
-    border-radius: 3px;
+.log-out-button {
+  margin-top: 2%;
+  font-size: 0.89vw !important;
+  padding: 0.7vh 0.7vw !important;
+  border-radius: 3px;
 }
 
-.log-out-button:hover{
-    opacity: 0.8;
+.log-out-button:hover {
+  opacity: 0.8;
 }
 
-.edit-profile{
-    margin-top: 5%;
-    color: #2687D7!important;
-    cursor: pointer;
+.edit-profile {
+  margin-top: 5%;
+  color: #2687d7 !important;
+  cursor: pointer;
 }
 
-a.edit-profile{
-    text-decoration: none;
+a.edit-profile {
+  text-decoration: none;
 }
 
-.edit-profile:hover{
-    text-decoration: underline;
+.edit-profile:hover {
+  text-decoration: underline;
 }
 
-.border-container{
-    border-bottom: 0.45vh solid #FFC086;
+.border-container {
+  border-bottom: 0.45vh solid #ffc086;
 }
 
-.settings-option-container{
-    font-size: 0.78vw;
-    margin-left: 6.9%;
-    margin-top: 1.2vh;
+.settings-option-container {
+  font-size: 0.78vw;
+  margin-left: 6.9%;
+  margin-top: 1.2vh;
 }
 
-.bs-popover-auto[x-placement^=bottom], .bs-popover-bottom {
-    margin-top: 1px!important;
+.bs-popover-auto[x-placement^="bottom"],
+.bs-popover-bottom {
+  margin-top: 1px !important;
 }
 
-.popup-danger:hover{
-    color: #c91d12!important;
+.popup-danger:hover {
+  color: #c91d12 !important;
 }

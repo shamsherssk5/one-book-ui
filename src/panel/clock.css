@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap");
+.App {
+  font-family: sans-serif;
+}
+
+.clock {
+  width: 5.6vw;
+  height: 5.6vw;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(0%, -50%);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+  font-size: 0.65vw;
+  color: #444;
+  text-align: center;
+  background-image: radial-gradient(#49bbd4 0%, #23748c 97%, #1f6979 99%);
+}
+
+.clock::after {
+  background: #aaa;
+  content: "";
+  width: 0.15vw;
+  height: 0.15vw;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 0.01vw solid #dae5f3;
+}
+
+.hour_hand {
+  position: absolute;
+  width: 0.15vw;
+  height: 1.35vw;
+  background: #dae5f3;
+  top: 1.45vw;
+  left: 49%;
+  transform-origin: bottom;
+}
+
+.min_hand {
+  position: absolute;
+  width: 0.1vw;
+  height: 1.7vw;
+  background: #dae5f3;
+  top: 1.1vw;
+  left: 49%;
+  transform-origin: bottom;
+}
+
+.sec_hand {
+  position: absolute;
+  width: 0.05vw;
+  height: 2vw;
+  background: #dae5f3;
+  top: 0.8vw;
+  left: 50%;
+  transform-origin: bottom;
+}
+
+.clock span {
+  position: absolute;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 700;
+  color:#dae5f3;
+}
+
+.twelve {
+  top: 0.1vw;
+  left: 45%;
+}
+
+.one {
+  top: 7%;
+  right: 26%;
+}
+
+.eleven {
+  top: 7%;
+  left: 26%;
+}
+
+.two {
+  top: 20%;
+  right: 10%;
+}
+
+.three {
+  right: 0.11vw;
+  top: 41%;
+}
+
+.four {
+  right: 10%;
+  bottom: 21%;
+}
+
+.five {
+  right: 26%;
+  bottom: 7%;
+}
+
+.six {
+  bottom: 0.1vw;
+  left: 45%;
+}
+
+.seven {
+  bottom: 7%;
+  left: 26%;
+}
+
+.eight {
+  bottom: 21%;
+  left: 10%;
+}
+
+.nine {
+  left: 0.11vw;
+  top: 41%;
+}
+
+.ten {
+  top: 20%;
+  left: 10%;
+}

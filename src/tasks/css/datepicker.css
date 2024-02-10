@@ -2,7 +2,7 @@
     font-size: 0.76vw!important;
 }
 
-.react-date-picker__calendar,.react-date-picker__wrapper{
+.react-date-picker__calendar,.react-date-picker__wrapper,.react-datetime-picker__calendar,.react-datetime-picker__wrapper{
     width: 17vw!important;
     cursor: pointer;
 }
@@ -11,7 +11,7 @@
     width: 15vw!important;
 }
 
-.react-date-picker__wrapper{
+.react-date-picker__wrapper,.react-datetime-picker__wrapper{
     border: none!important;
 }
 
@@ -29,4 +29,8 @@
     margin-left: -45%;
     margin-top: -100%;
     position: absolute;
+}
+
+.react-datetime-picker__inputGroup__amPm{
+    color:#2687D7!important; 
 }

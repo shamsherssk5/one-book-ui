@@ -1,133 +1,133 @@
-.notes-container{
-    height: 100%;
-    width: 100%;
-    position: relative;
-    overflow-y: auto;
+.notes-container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow-y: auto;
 }
 
-.notes-adder-container{
-    height: 29.5%;
-    left:10.78%;
-    width: 82.9%;
-    position: relative;
+.notes-adder-container {
+  height: 29.5%;
+  left: 10.78%;
+  width: 82.9%;
+  position: relative;
 }
-.rem-adder{
-    height: 32.1%!important;
+.rem-adder {
+  height: 32.1% !important;
 }
-.notes-adder-header{
-    margin-top: 3.9vh;
-    position: absolute;
-    color: #2687D7;
-    font-size: 0.93vw;
-    font-weight: 400;
+.notes-adder-header {
+  margin-top: 3.9vh;
+  position: absolute;
+  color: #2687d7;
+  font-size: 0.93vw;
+  font-weight: 400;
 }
-.notes-add-input{
-    position: absolute;
-    margin-top: 8vh;
-    border: none;
-    padding: 0;
-    outline: none;
-    width: 99%;
-    border-bottom: 1px solid #2687D7;
-    font-size: 0.93vw;
-    color: #353A42;
-    padding-left: 2px;
-
+.notes-add-input {
+  position: absolute;
+  margin-top: 8vh;
+  border: none;
+  padding: 0;
+  outline: none;
+  width: 99%;
+  border-bottom: 1px solid #2687d7;
+  font-size: 0.93vw;
+  color: #353a42;
+  padding-left: 2px;
 }
-.notes-add-button{
-    position: absolute;
-    right: 0;
-    bottom: 2.8vh;
-}
-
-.notes-content-container{
-    left:4.9%;
-    width: 90.25%;
-    height: 55%;
-    position: relative;
-    top:4.175vh;
+.notes-add-button {
+  position: absolute;
+  right: 0;
+  bottom: 2.8vh;
 }
 
-.notes-table{
-    height: 8.35vh;
-    width: 100%;
-    border: 1px solid #C4C4C4;
-    top:-4.1vh!important;
-    padding-left: 5vw;
-}
-.notes-data-text{
-    padding-left: 1.5vw;
-    margin: 0;
-    font-size: 0.93vw;
-    color: #000000;
-    font-weight: normal;
-    margin-top: 1vh;
+.notes-content-container {
+  left: 4.9%;
+  width: 90.25%;
+  height: 55%;
+  position: relative;
+  top: 4.175vh;
 }
 
-.notes-data-info{
-    margin: 0;
-    margin-bottom: 1vh;
-    padding-left: 1.5vw;
-    color: #7C7C7C;
-    font-size: 0.73vw;
+.notes-table {
+  height: 8.35vh;
+  width: 100%;
+  border: 1px solid #c4c4c4;
+  top: -4.1vh !important;
+  padding-left: 5vw;
+}
+.notes-data-text {
+  padding-left: 1.5vw;
+  margin: 0;
+  font-size: 0.93vw;
+  color: #000000;
+  font-weight: normal;
+  margin-top: 1vh;
 }
 
-.notes-edit, .notes-delete{
-    width: 1.5vw;
-    margin-right: 1.09vw;
-
+.notes-data-info {
+  margin: 0;
+  margin-bottom: 1vh;
+  padding-left: 1.5vw;
+  color: #7c7c7c;
+  font-size: 0.73vw;
 }
 
-.notes-edit:hover, .notes-delete:hover{
-    opacity: 0.7;
-}
-.date-user-selctor{
-    position: absolute;
-    top:8.8vh;
-    font-size: 0.93vw;
-    color: #000000;
+.notes-edit,
+.notes-delete {
+  width: 1.5vw;
+  margin-right: 1.09vw;
 }
 
-.rem-adder-input{
-    margin-top:0vh!important;
-    margin-left: 0.7vw;
-    width:42vw;
+.notes-edit:hover,
+.notes-delete:hover {
+  opacity: 0.7;
 }
-.rem-header{
-    font-size: 0.68vw!important;
-}
-.description-adder{
-    position: absolute;
-    top:14.26vh;
-    width: 100%;
-    display: block;
-}
-.rem-desc{
-    font-size: 0.93vw;
-    color: #000000;
-}
-.rem-adder-button{
-    bottom: 0!important;
-    position: relative;
-    margin-left: 46vw;
-}
-.rem-date-selector{
-    margin-left: 1vw;
-    border-bottom: 1px solid #2687D7;
-    padding-bottom: 0.5vh;
-}
-.rem-to-sle{
-    margin-left: 1vw;
+.date-user-selctor {
+  position: absolute;
+  top: 8.8vh;
+  font-size: 0.93vw;
+  color: #000000;
 }
 
-.rem-to-selector{
-    display: inline-block;
-    margin-left: 1vw;
-    border-bottom: 1px solid #2687D7;
-    z-index: 100;
-    width: 10vw;
+.rem-adder-input {
+  margin-top: 0vh !important;
+  margin-left: 0.7vw;
+  width: 42vw;
+}
+.rem-header {
+  font-size: 0.68vw !important;
+}
+.description-adder {
+  position: absolute;
+  top: 14.26vh;
+  width: 100%;
+  display: block;
+}
+.rem-desc {
+  font-size: 0.93vw;
+  color: #000000;
+}
+.rem-adder-button {
+  bottom: 0 !important;
+  position: relative;
+  margin-left: 46vw;
+}
+.rem-date-selector {
+  margin-left: 1vw;
+  border-bottom: 1px solid #2687d7;
+  padding-bottom: 0.5vh;
+}
+.rem-to-sle {
+  margin-left: 1vw;
 }
 
-.rem-sle-box{
-    color: #000000!important;
+.rem-to-selector {
+  display: inline-block;
+  margin-left: 1vw;
+  border-bottom: 1px solid #2687d7;
+  z-index: 100;
+  width: 10vw;
+}
+
+.rem-sle-box {
+  color: #000000 !important;
 }

@@ -20,7 +20,6 @@ const PhonebookPaginatedItems = ({
   deleteTrigger,
   setDeleteTrigger
 }) => {
-  console.log(items);
   const [currentItems, setCurrentItems] = useState(null);
   const [pageCount, setPageCount] = useState(0);
   const [itemOffset, setItemOffset] = useState(0);
